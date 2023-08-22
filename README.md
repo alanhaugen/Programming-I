@@ -6,7 +6,7 @@ colorlinks: true
 
 Find my Programming-I repository and session-I branch here: [https://github.com/alanhaugen/Programming-I/tree/Compulsory1](https://github.com/alanhaugen/Programming-I/tree/Compulsory1)
 
-As I prefer using a mac, I have provided the project as a Makefile, QtCreator `qbs` file (I **HIGHLY** recommend *QtCreator*) and a `CMakeLists.txt` file. You can open the `CMakeLists.txt` file with Visual Studio 2022 Community Edition, alternatively you can use it with cmake to create project files for vscode. I hope this is acceptable.
+As I prefer using a mac, I have provided the project as a Makefile, QtCreator `qbs` file (I personally really enjoy using *QtCreator* as it works on multiple platforms) and a `CMakeLists.txt` file. You can open the `CMakeLists.txt` file with Visual Studio 2022 Community Edition, alternatively you can use it with cmake to create project files for vscode. I hope this is acceptable.
 
 The program I wrote can be found in `main.cpp`
 
