@@ -33,4 +33,6 @@ I have a website at [alanhaugen.github.io](https://alanhaugen.github.io)
 
 Check out my GitHub profile [github.com/alanhaugen](https://github.com/alanhaugen)
 
+To open the `qbs` file, please check out [QtCreator open source](https://www.qt.io/download-open-source)
+
 I hope to play around more with C++ and learn the language even better. I like going over the basics and hope to do well in this course. I am personally particularly looking forwards to learning modern OpenGL later, I know programming quickly becomes rather difficuly so I am happy to be doing easier courses before going onto more difficult tasks.
