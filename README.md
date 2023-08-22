@@ -1,10 +1,14 @@
+---
+colorlinks: true
+---
+
 # Hans Alan Whiburn Haugen
 
-Find my Programming-I repository and session-I branch here: [https://github.com/alanhaugen/Session-1](https://github.com/alanhaugen/Session-1)
+Find my Programming-I repository and session-I branch here: [https://github.com/alanhaugen/Session-1/tree/Compulsory1](https://github.com/alanhaugen/Session-1/tree/Compulsory1)
 
 As I prefer using a mac, I have provided the project as a Makefile, QtCreator qbs file (I **HIGHLY** recommend QtCreator) and a CMakeLists.txt file. You can open the CMakeLists.txt file with Visual Studio 2022 Community Edition, alternatively use it to create files for vscode. I hope this is acceptable.
 
-I have done a lot of programming in the past. I have an A in C++ from a University in Scotland. I studied Computer Games Application Development. I have worked on a lot of hobby projects since. Feel free to look into my previous work via my github and personal website below:
+I have done a lot of programming in the past. I have an A in C++ from a University in Scotland. I studied Computer Games Application Development at Abertay University, the first University to provide a games education in the world. I have worked on a lot of hobby projects since. Feel free to look into my previous work via my github and personal website below:
 
 I have a website at [alanhaugen.github.io](https://alanhaugen.github.io)
 
