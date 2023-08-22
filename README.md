@@ -4,7 +4,7 @@ colorlinks: true
 
 # Hans Alan Whiburn Haugen
 
-Find my Programming-I repository and session-I branch here: [https://github.com/alanhaugen/Session-1/tree/Compulsory1](https://github.com/alanhaugen/Session-1/tree/Compulsory1)
+Find my Programming-I repository and session-I branch here: [https://github.com/alanhaugen/Programming-I/tree/Compulsory1](https://github.com/alanhaugen/Session-1/tree/Compulsory1)
 
 As I prefer using a mac, I have provided the project as a Makefile, QtCreator qbs file (I **HIGHLY** recommend QtCreator) and a CMakeLists.txt file. You can open the CMakeLists.txt file with Visual Studio 2022 Community Edition, alternatively use it to create files for vscode. I hope this is acceptable.
 
