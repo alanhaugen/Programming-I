@@ -2,6 +2,7 @@ CMakeFiles
 build*
 *user
 hello
+*.out
 
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
