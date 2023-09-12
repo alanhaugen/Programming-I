@@ -3,6 +3,27 @@
 
 using namespace std;
 
+/*
+ * For this Compulsory, you will have to create a program using a
+ * Procedural Programming Paradigm approach to implement a calculator
+ * that will perform the following operations:
+
+ * Factorial (use recursion)
+ * Solving polynomial equations
+ * Simple math equations (addition, subtraction, multiplication and division).
+
+ * In order to do this, create a menu system that will allow the user to
+ * choose between these three options, as well as offer a choice to terminate
+ * the program. Use functions to keep the code as clear and modular as
+ * possible. Control for unexpected inputs (strings where numbers are expected).
+ * Use XML documentation practices for all defined functions. The submission
+ * will be a PDF with Surname_Name_Compulsory2 and have the following:
+
+ * Link to GitHub repository (public!) with all the project files and code
+ * Brief paragraph discussing the benefits of using recursion in certain scenarios versus an iterative approach
+ * How you feel you have progressed in programming since the start of the semester.
+*/
+
 int main()
 {
     //Define an array of integers, ask the user for the size, and then for them to
