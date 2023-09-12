@@ -6,8 +6,8 @@
 
 using namespace std;
 
-int GetInteger();
-double GetDouble();
-string GetString();
+int GetInteger(string message = "");
+double GetDouble(string message = "");
+string GetString(string message = "");
 
 #endif

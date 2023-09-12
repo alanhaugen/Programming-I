@@ -9,12 +9,7 @@
 using namespace std;
 
 unsigned int Factorial(unsigned int n);
-
-struct polonomial
-{
-    int xCoefficiants;
-    int yCoefficiants;
-    int constant;
-};
+void Calc();
+void SolvePolynomial();
 
 #endif

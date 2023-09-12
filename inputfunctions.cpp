@@ -1,10 +1,12 @@
 #include "inputfunctions.h"
 
-int GetInteger()
+int GetInteger(string message)
 {
     int input;
     bool fail = true;
 
+    cout << message;
+
     do
     {
         cin >> input;
@@ -26,11 +28,13 @@ int GetInteger()
     return input;
 }
 
-double GetDouble()
+double GetDouble(string message)
 {
     double input;
     bool fail = true;
 
+    cout << message;
+
     do
     {
         cin >> input;
@@ -52,10 +56,12 @@ double GetDouble()
     return input;
 }
 
-string GetString()
+string GetString(string message)
 {
     string input;
     bool fail = true;
+
+    cout << message;
 
     do
     {

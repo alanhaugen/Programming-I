@@ -5,6 +5,8 @@ CppApplication {
     files: [
         "inputfunctions.cpp",
         "main.cpp",
+        "polynomial.cpp",
+        "polynomial.h",
     ]
 
     Group {     // Properties for the produced executable

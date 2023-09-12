@@ -1,4 +1,5 @@
 #include "main.h"
+#include "polynomial.h"
 
 /*
  * For this Compulsory, you will have to create a program using a
@@ -43,16 +44,18 @@ int main()
         {
         case 1:
             cout << endl << "Calculate factorial" << endl;
-            cout << "Choose n (n!): ";
-
-            cout << Factorial(GetInteger()) << endl;
+            cout << Factorial(GetInteger("Choose n (n!):")) << endl;
             break;
 
         case 2:
+            cout << endl << "Solve polynomial" << endl;
+            SolvePolynomial();
             break;
 
         case 3:
-             break;
+            cout << endl << "Simple math equations" << endl;
+            Calc();
+            break;
 
         case 4:
             isAlive = false;
@@ -75,4 +78,76 @@ unsigned int Factorial(unsigned int n)
     }
 
     return 1;
+}
+
+void SolvePolynomial()
+{
+    Polynomial a, b, result;
+
+    a = Polynomial(GetInteger("Insert coefficiant for x^3: "),
+                   GetInteger("Insert coefficiant for x^2: "),
+                   GetInteger("Insert coefficiant for x^1: "),
+                   GetInteger("Insert constant: "));
+
+    string operation = GetString("Choose operation (+ - * /): ");
+
+    cout << "Choose a second polynomial:" << endl;
+
+    b = Polynomial(GetInteger("Insert coefficiant for x^3: "),
+                   GetInteger("Insert coefficiant for x^2: "),
+                   GetInteger("Insert coefficiant for x^1: "),
+                   GetInteger("Insert constant: "));
+
+    switch(operation[0])
+    {
+    case '+':
+        result = a + b;
+        break;
+    case '-':
+        result = a - b;
+        break;
+    case '*':
+        result = a * b;
+        break;
+    case '/':
+        result = a / b;
+        break;
+    default:
+        cout << "Illegal operation" << endl;
+        break;
+    }
+
+    result.Print();
+
+    cout << "The derivative of first polynomial (a)" << endl;
+
+    a.Derivate();
+}
+
+void Calc()
+{
+    double a = GetDouble("Choose a number: ");
+    string operation = GetString("Choose operation (+ - * /): ");
+    double b = GetDouble("Choose another a number: ");
+
+    switch(operation[0])
+    {
+    case '+':
+        cout << a + b;
+        break;
+    case '-':
+        cout << a - b;
+        break;
+    case '*':
+        cout << a * b;
+        break;
+    case '/':
+        cout << a / b;
+        break;
+    default:
+        cout << "Illegal operation" << endl;
+        break;
+    }
+
+    cout << endl;
 }
