@@ -4,35 +4,26 @@ colorlinks: true
 
 # Hans Alan Whiburn Haugen
 
-Find my Programming-I repository and session-I branch here: [https://github.com/alanhaugen/Programming-I/tree/Compulsory1](https://github.com/alanhaugen/Programming-I/tree/Compulsory1)
+Find my Programming-I repository and Compulsory-II branch here: [https://github.com/alanhaugen/Programming-I/tree/Compulsory2](https://github.com/alanhaugen/Programming-I/tree/Compulsory2)
 
-As I prefer using a mac, I have provided the project as a Makefile, QtCreator `qbs` file (I personally really enjoy using *QtCreator* as it works on multiple platforms) and a `CMakeLists.txt` file. You can open the `CMakeLists.txt` file with Visual Studio 2022 Community Edition, alternatively you can use it with cmake to create project files for vscode. I hope this is acceptable.
+## Benefits of using recursion in certain scenarios versus an iterative approach
 
-The program I wrote can be found in `main.cpp`
+Recursion is fun to write and results in really neat, short code. However, you can have problems such as a stack overflow with recursive functions. Even though they are neat, fun to write and can make thinking about certain problems easier, if they run wild the program will fail to compile as the program stack reaches its limit. Infinite recursive loops results in programs which simply won't compile. This might be a feature rather than a bug, it might avoid certain runtime errors.
 
-Notice I commented out the C-way of doing standard output.
+Personally, I find iterative loops easier to reason with and find recursion to be black magick. Therefore, I will avoid recursive functions in my programs.
 
-```cpp
-//#include <stdio.h>
-#include <iostream> // This includes the output library for C++
+## My progression in programming since the start of the semester
 
-int main() // This is the main entry point of the program
-{
-    //printf("Hello, world"); (old C way)
+It is a delight to do programming again. I have now not done any programming courses for many years. I am happy to finally follow this track again and hope to be successful.
 
-    // This will output a message and an endline
-    std::cout << "Hello, world!" << std::endl; 
+I have learnt more about program scope, personally I have never seen :: be used to access the global scope. I found an interesting article from Microsoft on scope: [https://learn.microsoft.com/en-us/cpp/cpp/scope-visual-cpp?view=msvc-170](https://learn.microsoft.com/en-us/cpp/cpp/scope-visual-cpp?view=msvc-170).
 
-    return 0;  // This exits the program with success
-}
-```
+I find Microsoft has the best documentation in the industry. Time to have a European contender to pick up the slack?
 
-I have done a lot of programming in the past. I have an A in C++ from a University in Scotland. I studied Computer Games Application Development at Abertay University, the first University to provide a games education in the world. I have worked on a lot of hobby projects since. Feel free to look into my previous work via my github and personal website below:
+I feel inspired to challenge myself with some new programming adventures. I enjoyed programming math problems into the computer and would like to further persue how calculation, particularly algebra and calculus, can be done on a computer.
 
-I have a website at [alanhaugen.github.io](https://alanhaugen.github.io)
+I still want to learn more about memory. I know there is a stack for non-dynamic variables and for function calls, allocated at a fixed-size at program start, and heap for dynamic allocations. I found the book Data Structures for Games Programmers by Ron Penton to have insight into memory [https://cdn.preterhuman.net/texts/math/Data_Structure_And_Algorithms/Data%20Structure%20For%20Game%20Programers%20-%20Ron%20Penton.pdf](https://cdn.preterhuman.net/texts/math/Data_Structure_And_Algorithms/Data%20Structure%20For%20Game%20Programers%20-%20Ron%20Penton.pdf).
 
-Check out my GitHub profile [github.com/alanhaugen](https://github.com/alanhaugen)
+In the appendix there is a chapter called *The Memory Layout of a Computer Program* which I will have to refer to again.
 
-To open the `qbs` file, please check out [QtCreator open source](https://www.qt.io/download-open-source)
 
-I hope to play around more with C++ and learn the language even better. I like going over the basics and hope to do well in this course. I am personally particularly looking forwards to learning modern OpenGL later, I know programming quickly becomes rather difficuly so I am happy to be doing easier courses before going onto more difficult tasks.
