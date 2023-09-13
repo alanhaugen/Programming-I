@@ -3,6 +3,9 @@
 
 class Polynomial
 {
+private:
+    void Solve();
+
 public:
     double thirdDegreeCoefficiants;
     double secondDegreeCoefficiants;
@@ -11,6 +14,10 @@ public:
 
     void Derivate();
     void Print();
+
+    double solutions[2];
+    bool isTwoSolutions;
+    bool isSolved;
 
     Polynomial();
     Polynomial(double third, double second, double first, double c);

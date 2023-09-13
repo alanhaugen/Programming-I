@@ -43,17 +43,14 @@ int main()
         switch (input)
         {
         case 1:
-            cout << endl << "Calculate factorial" << endl;
-            cout << Factorial(GetInteger("Choose n (n!):")) << endl;
+            cout << Factorial(GetInteger("Choose n (n!): ")) << endl;
             break;
 
         case 2:
-            cout << endl << "Solve polynomial" << endl;
             SolvePolynomial();
             break;
 
         case 3:
-            cout << endl << "Simple math equations" << endl;
             Calc();
             break;
 
@@ -82,46 +79,29 @@ unsigned int Factorial(unsigned int n)
 
 void SolvePolynomial()
 {
-    Polynomial a, b, result;
+    //GetString("Type a polynomial (ex. x^2 + 2x - 5): ");
 
-    a = Polynomial(GetInteger("Insert coefficiant for x^3: "),
-                   GetInteger("Insert coefficiant for x^2: "),
-                   GetInteger("Insert coefficiant for x^1: "),
-                   GetInteger("Insert constant: "));
+    Polynomial a(0,
+                 GetInteger("Insert coefficiant for x^2: "),
+                 GetInteger("Insert coefficiant for x^1: "),
+                 GetInteger("Insert constant: "));
 
-    string operation = GetString("Choose operation (+ - * /): ");
-
-    cout << "Choose a second polynomial:" << endl;
-
-    b = Polynomial(GetInteger("Insert coefficiant for x^3: "),
-                   GetInteger("Insert coefficiant for x^2: "),
-                   GetInteger("Insert coefficiant for x^1: "),
-                   GetInteger("Insert constant: "));
-
-    switch(operation[0])
+    if (a.isSolved)
     {
-    case '+':
-        result = a + b;
-        break;
-    case '-':
-        result = a - b;
-        break;
-    case '*':
-        result = a * b;
-        break;
-    case '/':
-        result = a / b;
-        break;
-    default:
-        cout << "Illegal operation" << endl;
-        break;
+        cout << "Solutions (f(x) = 0): ";
+
+        // Go through all solutions and output them
+        cout << endl << a.solutions[0] << endl;
+
+        if (a.isTwoSolutions)
+        {
+            cout << a.solutions[1] << endl;
+        }
     }
-
-    result.Print();
-
-    cout << "The derivative of first polynomial (a)" << endl;
-
-    a.Derivate();
+    else
+    {
+        cout << "Fail: No solutions calculated" << endl;
+    }
 }
 
 void Calc()
