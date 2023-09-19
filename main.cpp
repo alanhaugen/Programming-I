@@ -79,8 +79,20 @@ int main()
 }
 
 /// Calculate factorial (n!) recursively
+///
+/// This function will only accept positive numbers and will output an error
+/// if n > 20 since factorials of this size are outside the range of unsigned long long int
 unsigned long long int Factorial(unsigned int n)
 {
+    if (n > 20)
+    {
+        cout << "Error! n must below 20!" << endl
+             << "This is because 21! is above unsigned long long int resolution (2^64 - 1)"
+             << endl;
+
+        return 0;
+    }
+
     if (n > 1)
     {
         return n * Factorial(n-1);
