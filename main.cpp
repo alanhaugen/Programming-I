@@ -1,22 +1,23 @@
 #include "main.h"
+#include "inputfunctions.h"
 #include "polynomial.h"
 
 /*
  * For this Compulsory, you will have to create a program using a
  * Procedural Programming Paradigm approach to implement a calculator
  * that will perform the following operations:
-
+ *
  * Factorial (use recursion)
  * Solving polynomial equations
  * Simple math equations (addition, subtraction, multiplication and division).
-
+ *
  * In order to do this, create a menu system that will allow the user to
  * choose between these three options, as well as offer a choice to terminate
  * the program. Use functions to keep the code as clear and modular as
  * possible. Control for unexpected inputs (strings where numbers are expected).
  * Use XML documentation practices for all defined functions. The submission
  * will be a PDF with Surname_Name_Compulsory2 and have the following:
-
+ *
  * Link to GitHub repository (public!) with all the project files and code
  * Brief paragraph discussing the benefits of using recursion in certain
  * scenarios versus an iterative approach.
@@ -27,7 +28,7 @@ int main()
 {
     bool isAlive = true;
 
-    cout << "Alan's Calculator" << endl << endl;
+    cout << "Alan's Calculator" << endl << endl; // Rom
 
     while (isAlive)
     {
@@ -56,6 +57,10 @@ int main()
 
         case 4:
             isAlive = false;
+            break;
+
+        case 5:
+            princ = Principia(GetString("You found a secret,\nType an expression: \n\n"));
             break;
 
         default:
@@ -108,7 +113,7 @@ void Calc()
 {
     double a = GetDouble("Choose a number: ");
     string operation = GetString("Choose operation (+ - * /): ");
-    double b = GetDouble("Choose another a number: ");
+    double b = GetDouble("Choose another number: ");
 
     switch(operation[0])
     {

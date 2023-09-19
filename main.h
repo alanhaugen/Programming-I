@@ -4,12 +4,12 @@
 #include <iostream>
 #include <string>
 
-#include "inputfunctions.h"
-
-using namespace std;
+#include "principia.h"
 
 unsigned int Factorial(unsigned int n);
 void Calc();
 void SolvePolynomial();
+
+Principia princ;
 
 #endif

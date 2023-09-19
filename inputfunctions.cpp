@@ -70,7 +70,7 @@ string GetString(string message)
         // Error handling for cin
         if (cin.fail())
         {
-            cout << "Please enter numbers only\n";
+            cout << "Please enter letters only\n";
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }

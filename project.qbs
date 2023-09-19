@@ -7,6 +7,8 @@ CppApplication {
         "main.cpp",
         "polynomial.cpp",
         "polynomial.h",
+        "principia.cpp",
+        "principia.h",
     ]
 
     Group {     // Properties for the produced executable
