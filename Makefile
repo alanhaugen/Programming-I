@@ -1,6 +1,8 @@
 .PHONY: all
 
-all: app alan.pdf
+PDF = Haugen_HansAlanWhitburn_Compulsory2.pdf
+
+all: app $(PDF)
 
 CC = g++
 SOURCES = $(wildcard *.cpp)
@@ -13,6 +15,6 @@ app: $(OBJS)
 %o: %.cpp
 	$(CC) $(CFLAGS) -c $*.cpp -o $@
 
-alan.pdf: README.md
-	pandoc README.md -f markdown -t pdf -o alan.pdf
+$(PDF): README.md
+	pandoc README.md -f markdown -t pdf -o $(PDF)
 
