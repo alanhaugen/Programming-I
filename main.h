@@ -6,7 +6,7 @@
 
 #include "principia.h"
 
-unsigned int Factorial(unsigned int n);
+unsigned long long Factorial(unsigned int n);
 void Calc();
 void SolvePolynomial();
 

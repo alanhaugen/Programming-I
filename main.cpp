@@ -2,14 +2,19 @@
 #include "inputfunctions.h"
 #include "polynomial.h"
 
-/*
+/*! \mainpage Programming I: Compulsory 2
+ *
+ * \section intro_sec Introduction
+ *
  * For this Compulsory, you will have to create a program using a
  * Procedural Programming Paradigm approach to implement a calculator
  * that will perform the following operations:
  *
- * Factorial (use recursion)
- * Solving polynomial equations
- * Simple math equations (addition, subtraction, multiplication and division).
+ * - Factorial (use recursion)
+ * - Solving 3rd degree polynomial equations (addition, subtraction, multiplication)
+ * - Simple math equations (addition, subtraction, multiplication and division).
+ *
+ * \section Instructions
  *
  * In order to do this, create a menu system that will allow the user to
  * choose between these three options, as well as offer a choice to terminate
@@ -24,11 +29,12 @@
  * How you feel you have progressed in programming since the start of the semester.
 */
 
+/// The main entry point of the program
 int main()
 {
     bool isAlive = true;
 
-    cout << "Alan's Calculator" << endl << endl; // Rom
+    cout << "Alan's Calculator" << endl << endl;
 
     while (isAlive)
     {
@@ -44,7 +50,7 @@ int main()
         switch (input)
         {
         case 1:
-            cout << Factorial(GetInteger("Choose n (n!): ")) << endl;
+            cout << Factorial(GetUnsignedInteger("Choose n (n!): ")) << endl; // 20 is limit
             break;
 
         case 2:
@@ -72,7 +78,8 @@ int main()
     return 0;
 }
 
-unsigned int Factorial(unsigned int n)
+/// Calculate factorial (n!) recursively
+unsigned long long int Factorial(unsigned int n)
 {
     if (n > 1)
     {
@@ -82,11 +89,13 @@ unsigned int Factorial(unsigned int n)
     return 1;
 }
 
+/// Function which allows user to put in two polynomials
+/// and do addition, substraction, multiplication and division
 void SolvePolynomial()
 {
     //GetString("Type a polynomial (ex. x^2 + 2x - 5): ");
 
-    Polynomial a(0,
+    Polynomial a(GetInteger("Insert coefficiant for x^3: "),
                  GetInteger("Insert coefficiant for x^2: "),
                  GetInteger("Insert coefficiant for x^1: "),
                  GetInteger("Insert constant: "));
@@ -103,12 +112,37 @@ void SolvePolynomial()
             cout << a.solutions[1] << endl;
         }
     }
-    else
+
+    cout << "Please choose another polynomial" << endl;
+
+    Polynomial b(GetInteger("Insert coefficiant for x^3: "),
+                 GetInteger("Insert coefficiant for x^2: "),
+                 GetInteger("Insert coefficiant for x^1: "),
+                 GetInteger("Insert constant: "));
+
+    string operation = GetString("Choose operation (+ - * /): ");
+
+    switch(operation[0])
     {
-        cout << "Fail: No solutions calculated" << endl;
+    case '+':
+        (a + b).Print();
+        break;
+    case '-':
+        (a - b).Print();
+        break;
+    case '*':
+        (a * b).Print();
+        break;
+    /*case '/':
+        (a / b).Print();
+        break;*/
+    default:
+        cout << "Illegal operation" << endl;
+        break;
     }
 }
 
+/// Do basic calculations
 void Calc()
 {
     double a = GetDouble("Choose a number: ");

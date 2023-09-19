@@ -1,0 +1,64 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Programming I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Compulsory 2}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Instructions}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Polynomial Class Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Constructor \& Destructor Documentation}{7}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Polynomial()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{8}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Polynomial()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{8}{subsubsection.4.1.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Member Function Documentation}{8}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Derivate()}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}operator$\ast $()}{8}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}operator+()}{8}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}operator-\/()}{9}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}Print()}{9}{subsubsection.4.1.2.5}%
+\contentsline {subsection}{\numberline {4.1.3}Member Data Documentation}{9}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}coefficiants}{9}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}constant}{9}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}isSolved}{9}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}isTwoSolutions}{9}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}solutions}{10}{subsubsection.4.1.3.5}%
+\contentsline {section}{\numberline {4.2}Principia Class Reference}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Constructor \& Destructor Documentation}{10}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Principia()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{10}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Principia()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.4.2.1.2}%
+\contentsline {chapter}{\numberline {5}File Documentation}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Make\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lists.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}txt File Reference}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}inputfunctions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{11}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Function Documentation}{11}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}GetDouble()}{11}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}GetInteger()}{12}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}GetString()}{12}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}GetUnsignedInteger()}{12}{subsubsection.5.2.1.4}%
+\contentsline {section}{\numberline {5.3}inputfunctions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{12}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Function Documentation}{12}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}GetDouble()}{12}{subsubsection.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}GetInteger()}{13}{subsubsection.5.3.1.2}%
+\contentsline {subsubsection}{\numberline {5.3.1.3}GetString()}{13}{subsubsection.5.3.1.3}%
+\contentsline {subsubsection}{\numberline {5.3.1.4}GetUnsignedInteger()}{13}{subsubsection.5.3.1.4}%
+\contentsline {section}{\numberline {5.4}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{13}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{13}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}Calc()}{14}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}Factorial()}{14}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}main()}{14}{subsubsection.5.4.1.3}%
+\contentsline {subsubsection}{\numberline {5.4.1.4}SolvePolynomial()}{14}{subsubsection.5.4.1.4}%
+\contentsline {section}{\numberline {5.5}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{14}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Function Documentation}{15}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}Calc()}{15}{subsubsection.5.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.2}Factorial()}{15}{subsubsection.5.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.5.1.3}SolvePolynomial()}{15}{subsubsection.5.5.1.3}%
+\contentsline {subsection}{\numberline {5.5.2}Variable Documentation}{15}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}princ}{15}{subsubsection.5.5.2.1}%
+\contentsline {section}{\numberline {5.6}polynomial.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{15}{section.5.6}%
+\contentsline {section}{\numberline {5.7}polynomial.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{16}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Variable Documentation}{16}{subsection.5.7.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.1}MAX\_COEFFCIANTS}{16}{subsubsection.5.7.1.1}%
+\contentsline {section}{\numberline {5.8}principia.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{16}{section.5.8}%
+\contentsline {section}{\numberline {5.9}principia.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{16}{section.5.9}%
+\contentsline {section}{\numberline {5.10}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{16}{section.5.10}%
+\contentsline {chapter}{Index}{17}{section*.12}%

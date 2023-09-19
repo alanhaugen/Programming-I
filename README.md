@@ -26,4 +26,10 @@ I still want to learn more about memory. I know there is a stack for non-dynamic
 
 In the appendix there is a chapter called *The Memory Layout of a Computer Program* which I will have to refer to again.
 
+## Documentation
 
+I have used Doxygen to generate pretty documentation (XML)
+
+Please see [https://https://github.com/alanhaugen/Programming-I/tree/Compulsory2/html/index.html](https://github.com/alanhaugen/Programming-I/tree/Compulsory2/html/index.html).
+
+Alternatively, consider [https://github.com/alanhaugen/Programming-I/tree/Compulsory2/latex/refman.pdf](https://github.com/alanhaugen/Programming-I/tree/Compulsory2/latex/refman.pdf).
