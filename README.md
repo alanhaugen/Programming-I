@@ -30,6 +30,7 @@ In the appendix there is a chapter called *The Memory Layout of a Computer Progr
 
 I have used Doxygen to generate pretty documentation (XML)
 
-Please see [https://https://github.com/alanhaugen/Programming-I/tree/Compulsory2/html/index.html](https://github.com/alanhaugen/Programming-I/tree/Compulsory2/html/index.html).
+A pdf has been made available here: [https://github.com/alanhaugen/Programming-I/tree/Compulsory2/latex/refman.pdf](https://github.com/alanhaugen/Programming-I/tree/Compulsory2/latex/refman.pdf).
 
-Alternatively, consider [https://github.com/alanhaugen/Programming-I/tree/Compulsory2/latex/refman.pdf](https://github.com/alanhaugen/Programming-I/tree/Compulsory2/latex/refman.pdf).
+For html please see [https://github.com/alanhaugen/Programming-I/tree/Compulsory2/html/index.html](https://github.com/alanhaugen/Programming-I/tree/Compulsory2/html/index.html).
+
