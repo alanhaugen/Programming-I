@@ -105,8 +105,6 @@ unsigned long long int Factorial(unsigned int n)
 /// and do addition, substraction, multiplication and division
 void SolvePolynomial()
 {
-    //GetString("Type a polynomial (ex. x^2 + 2x - 5): ");
-
     Polynomial a(GetInteger("Insert coefficiant for x^3: "),
                  GetInteger("Insert coefficiant for x^2: "),
                  GetInteger("Insert coefficiant for x^1: "),

@@ -89,7 +89,7 @@ void Polynomial::Solve()
     }
 }
 
-/// Doc
+/// Initialise the object
 void Polynomial::Init()
 {
     for (int i = 0; i < MAX_COEFFCIANTS; i++)
