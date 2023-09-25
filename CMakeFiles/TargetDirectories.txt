@@ -1,3 +1,0 @@
-C:/Users/alanh/Programming-I/CMakeFiles/app.dir
-C:/Users/alanh/Programming-I/CMakeFiles/ALL_BUILD.dir
-C:/Users/alanh/Programming-I/CMakeFiles/ZERO_CHECK.dir
