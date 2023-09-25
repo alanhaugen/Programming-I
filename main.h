@@ -4,12 +4,12 @@
 #include <iostream>
 #include <string>
 
-#include "principia.h"
+//#include "principia.h"
 
 unsigned long long Factorial(unsigned int n);
 void Calc();
 void SolvePolynomial();
 
-Principia princ;
+//Principia princ;
 
 #endif

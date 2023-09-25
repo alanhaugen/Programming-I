@@ -66,7 +66,7 @@ int main()
             break;
 
         case 5:
-            princ = Principia(GetString("You found a secret,\nType an expression: \n\n"));
+            //princ = Principia(GetString("You found a secret,\nType an expression: \n\n"));
             break;
 
         default:
@@ -130,7 +130,7 @@ void SolvePolynomial()
                  GetInteger("Insert coefficiant for x^1: "),
                  GetInteger("Insert constant: "));
 
-    string operation = GetString("Choose operation (+ - * /): ");
+    string operation = GetString("Choose operation (+ - *): "); // /
 
     switch(operation[0])
     {
