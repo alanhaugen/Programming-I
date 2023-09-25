@@ -1,4 +1,7 @@
 CMakeFiles
+CMakeCache.txt
+x64
+app.dir
 build*
 *user
 app
