@@ -65,9 +65,9 @@ int main()
             isAlive = false;
             break;
 
-        case 5:
+        /*case 5:
             //princ = Principia(GetString("You found a secret,\nType an expression: \n\n"));
-            break;
+            break;*/
 
         default:
             cout << "Error: That is not one of the available options. Try again..." << endl;
