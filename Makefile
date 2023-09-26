@@ -1,11 +1,11 @@
-.PHONY: all
+.PHONY: all docs
 
 PDF = Haugen_HansAlanWhitburn_Compulsory2.pdf
 
 all: app $(PDF)
 
 CC = g++
-SOURCES = $(wildcard *.cpp)
+SOURCES = $(wildcard source/*.cpp)
 CFLAGS = -g -Wall
 OBJS = $(SOURCES:.cpp=.o)
 
@@ -18,3 +18,5 @@ app: $(OBJS)
 $(PDF): README.md
 	pandoc README.md -f markdown -t pdf -o $(PDF)
 
+docs:
+	doxygen docs
