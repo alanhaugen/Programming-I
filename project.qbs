@@ -3,11 +3,6 @@ import qbs
 CppApplication {
     consoleApplication: true
     files: [
-        "main.cpp",
-        "polynomial.cpp",
-        "polynomial.h",
-        "principia.cpp",
-        "principia.h",
         "source/inputfunctions.cpp",
         "source/inputfunctions.h",
         "source/main.cpp",

@@ -2,6 +2,11 @@
 #include "inputfunctions.h"
 #include "polynomial.h"
 
+#ifdef PRINCIPIA
+#include "principia.h"
+Principia princ;
+#endif
+
 /*! \mainpage Programming I: Compulsory 2
  *
  * \section intro_sec Introduction
@@ -65,9 +70,11 @@ int main()
             isAlive = false;
             break;
 
-        /*case 5:
-            //princ = Principia(GetString("You found a secret,\nType an expression: \n\n"));
-            break;*/
+#ifdef PRINCIPIA
+        case 5:
+            princ = Principia(GetString("You found a secret,\nType an expression: \n\n"));
+            break;
+#endif
 
         default:
             cout << "Error: That is not one of the available options. Try again..." << endl;
