@@ -5,6 +5,9 @@
 
 class Principia
 {
+private:
+    int sum;
+
 public:
     Principia();
 };

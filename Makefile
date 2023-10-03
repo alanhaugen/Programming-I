@@ -10,13 +10,15 @@ BISON ?= bison
 CC     = g++
 CFLAGS = -g -Wall -DPRINCIPIA
 
-#PARSERS  = $(wildcard source/*.y)
+PARSERS  = $(wildcard source/*.yacc)
 SCANNERS = $(wildcard source/*.lex)
 
 SOURCES = $(wildcard source/*.cpp)
 GENERATED_SOURCES = $(PARSERS:.y=.tab.cpp) $(SCANNERS:.lex=.cpp) 
 SOURCES += $(GENERATED_SOURCES)
 OBJS = $(SOURCES:.cpp=.o)
+
+source/principia.cpp: source/calc.o
 
 app: $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) -o app

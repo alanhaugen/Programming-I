@@ -1,6 +1,6 @@
-#line 2 "calc.cpp"
+#line 2 "source/calc.cpp"
 
-#line 4 "calc.cpp"
+#line 4 "source/calc.cpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -456,9 +456,9 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "calc.lex"
+#line 1 "source/calc.lex"
 /* recognize tokens for the calculator and print them out */
-#line 6 "calc.lex"
+#line 6 "source/calc.lex"
     enum yytokentype {
         NUMBER = 258,
         ADD    = 259,
@@ -470,7 +470,8 @@ char *yytext;
     };
 
     int yylval;
-#line 474 "calc.cpp"
+
+#line 475 "source/calc.cpp"
 
 #define INITIAL 0
 
@@ -652,10 +653,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 19 "calc.lex"
+#line 20 "source/calc.lex"
 
 
-#line 659 "calc.cpp"
+#line 660 "source/calc.cpp"
 
 	if ( !(yy_init) )
 		{
@@ -740,56 +741,56 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 21 "calc.lex"
+#line 22 "source/calc.lex"
 { return ADD; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "calc.lex"
+#line 23 "source/calc.lex"
 { return SUB; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 23 "calc.lex"
+#line 24 "source/calc.lex"
 { return MUL; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 24 "calc.lex"
+#line 25 "source/calc.lex"
 { return DIV; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 25 "calc.lex"
+#line 26 "source/calc.lex"
 { return ABS; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 26 "calc.lex"
+#line 27 "source/calc.lex"
 { yylval = atoi(yytext); return NUMBER; }
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
 YY_RULE_SETUP
-#line 27 "calc.lex"
+#line 28 "source/calc.lex"
 { return EOL; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 28 "calc.lex"
+#line 29 "source/calc.lex"
 { /* ignore whitespace */ }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 29 "calc.lex"
+#line 30 "source/calc.lex"
 { printf("Mystery character %s\n", yytext); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 31 "calc.lex"
+#line 32 "source/calc.lex"
 ECHO;
 	YY_BREAK
-#line 793 "calc.cpp"
+#line 794 "source/calc.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1786,7 +1787,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 31 "calc.lex"
+#line 32 "source/calc.lex"
 
 
 
