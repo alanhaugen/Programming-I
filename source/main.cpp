@@ -37,50 +37,9 @@ Principia princ;
 /// The main entry point of the program
 int main()
 {
-    bool isAlive = true;
-
-    cout << "Alan's Calculator" << endl << endl;
-
-    while (isAlive)
-    {
-        cout << "Choose one of the following options:" << endl << endl;
-
-        cout << "[1] Calculate factorial" << endl;
-        cout << "[2] Solve polynomial" << endl;
-        cout << "[3] Solve simple math equations (simple sums and divisions)" << endl;
-        cout << "[4] Quit program" << endl;
-
-        int input = GetInteger();
-
-        switch (input)
-        {
-        case 1:
-            cout << Factorial(GetUnsignedInteger("Choose n (n!): ")) << endl; // 20 is limit
-            break;
-
-        case 2:
-            SolvePolynomial();
-            break;
-
-        case 3:
-            Calc();
-            break;
-
-        case 4:
-            isAlive = false;
-            break;
-
 #ifdef PRINCIPIA
-        case 5:
-            princ = Principia(GetString("You found a secret,\nType an expression: \n\n"));
-            break;
+    princ = Principia();
 #endif
-
-        default:
-            cout << "Error: That is not one of the available options. Try again..." << endl;
-            break;
-        }
-    }
 
     return 0;
 }

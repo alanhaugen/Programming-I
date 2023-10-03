@@ -16,8 +16,8 @@
 
 %%
 
-int main() {
+/*int main() {
     while (yylex());
     return 0;
-}
+}*/
 

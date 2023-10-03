@@ -7,14 +7,14 @@ all: app $(PDF)
 FLEX  ?= flex
 BISON ?= bison
 
-CC = g++
+CC     = g++
 CFLAGS = -g -Wall -DPRINCIPIA
 
-PARSERS = 
-SCANNERS = $(wildcard *.l)
+#PARSERS  = $(wildcard source/*.y)
+#SCANNERS = $(wildcard source/*.lex)
 
 SOURCES = $(wildcard source/*.cpp)
-GENERATED_SOURCES = $(PARSERS:.y=.tab.cpp) $(SCANNERS:.l=.cpp) 
+GENERATED_SOURCES = $(PARSERS:.y=.tab.cpp) $(SCANNERS:.lex=.cpp) 
 SOURCES += $(GENERATED_SOURCES)
 OBJS = $(SOURCES:.cpp=.o)
 
@@ -27,8 +27,8 @@ app: $(OBJS)
 %.tab.cpp: %.y
 	$(BISON) -o $*.tab.cpp -d $<
 
-%.cpp: %.l 
-	$(FLEX) -o $*.cpp $*.l
+%.cpp: %.lex 
+	$(FLEX) -o $*.cpp $*.lex
 
 clean:
 	rm $(OBJS) app
