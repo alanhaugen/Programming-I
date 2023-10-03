@@ -2,10 +2,7 @@
 #include "inputfunctions.h"
 #include "polynomial.h"
 
-#ifdef PRINCIPIA
 #include "principia.h"
-Principia princ;
-#endif
 
 /*! \mainpage Programming I: Compulsory 2
  *
@@ -37,9 +34,7 @@ Principia princ;
 /// The main entry point of the program
 int main()
 {
-#ifdef PRINCIPIA
-    princ = Principia();
-#endif
+    Principia princ;
 
     return 0;
 }
