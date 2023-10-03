@@ -8,10 +8,10 @@ FLEX  ?= flex
 BISON ?= bison
 
 CC     = g++
-CFLAGS = -g -Wall -DPRINCIPIA
+CFLAGS = -g -Wall
 
-PARSERS  = $(wildcard source/*.yacc)
-SCANNERS = $(wildcard source/*.lex)
+#PARSERS  = $(wildcard source/*.yacc)
+#SCANNERS = $(wildcard source/*.lex)
 
 SOURCES = $(wildcard source/*.cpp)
 GENERATED_SOURCES = $(PARSERS:.y=.tab.cpp) $(SCANNERS:.lex=.cpp) 
