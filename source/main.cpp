@@ -4,7 +4,7 @@
 
 #include "principia.h"
 
-/*! \mainpage Programming I: Compulsory 2
+/*! \mainpage Programming I: Compulsory 3
  *
  * \section intro_sec Introduction
  *
