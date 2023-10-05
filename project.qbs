@@ -3,6 +3,8 @@ import qbs
 CppApplication {
     consoleApplication: true
     files: [
+        "source/calc.cpp",
+        "source/calc.lex",
         "source/inputfunctions.cpp",
         "source/inputfunctions.h",
         "source/main.cpp",

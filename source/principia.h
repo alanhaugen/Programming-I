@@ -5,9 +5,11 @@
 
 class Principia
 {
+private:
+    int sum;
+
 public:
     Principia();
-    Principia(std::string s);
 };
 
 #endif // PRINCIPIA_H
