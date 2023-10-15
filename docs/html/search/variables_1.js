@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dateofcreation_278',['dateOfCreation',['../class_info.html#ab51344b6a668b3d5625741e6ee858f26',1,'Info']]]
+  ['files_51',['files',['../class_folder.html#a42972015c89db0e7424b512aad3ec385',1,'Folder']]],
+  ['folders_52',['folders',['../class_folder.html#acf7ec71f6579cf863e000f21782d2891',1,'Folder']]]
 ];

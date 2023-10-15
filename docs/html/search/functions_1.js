@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['calc_221',['Calc',['../principia_8cpp.html#a9c385a47adf1e0f21024ee9e09ddc00c',1,'Calc():&#160;principia.cpp'],['../principia_8h.html#a9c385a47adf1e0f21024ee9e09ddc00c',1,'Calc():&#160;principia.cpp']]]
+  ['file_39',['File',['../class_file.html#ae039af5807fc385f41b60644725d15d0',1,'File']]],
+  ['folder_40',['Folder',['../class_folder.html#a8af69fd19ba86816c60b4c2291311eb1',1,'Folder::Folder()'],['../class_folder.html#a008b04a545e4bf2022de1ed686bfd7d2',1,'Folder::Folder(string _name)']]]
 ];

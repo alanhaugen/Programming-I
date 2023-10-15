@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['coefficiants_276',['coefficiants',['../class_polynomial.html#a635470858e476aa7ea8689b880dcc87f',1,'Polynomial']]],
-  ['constant_277',['constant',['../class_polynomial.html#ad1bde3f51658cc50be94f1ad9c775b64',1,'Polynomial']]]
+  ['dateofcreation_50',['dateOfCreation',['../class_info.html#ab51344b6a668b3d5625741e6ee858f26',1,'Info']]]
 ];

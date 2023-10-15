@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begin_4',['BEGIN',['../calc_8cpp.html#ab766bbbee08d04b67e3fe599d6900873',1,'calc.cpp']]]
+  ['dateofcreation_2',['dateOfCreation',['../class_info.html#ab51344b6a668b3d5625741e6ee858f26',1,'Info']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['if_233',['if',['../calc_8cpp.html#ad4a65b873df5c05570846b5413b41dfd',1,'calc.cpp']]],
-  ['isatty_234',['isatty',['../calc_8cpp.html#ab4155ffea05dab2dafae68fd88a0517f',1,'calc.cpp']]]
+  ['_7efolder_49',['~Folder',['../class_folder.html#a7b9eaf0f340d5275809494685b0a3e1d',1,'Folder']]]
 ];

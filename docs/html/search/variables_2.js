@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['files_279',['files',['../class_folder.html#a42972015c89db0e7424b512aad3ec385',1,'Folder']]],
-  ['folders_280',['folders',['../class_folder.html#acf7ec71f6579cf863e000f21782d2891',1,'Folder']]]
+  ['max_5ffiles_53',['MAX_FILES',['../folder_8h.html#af0a70e46051f9d6caccaa22771f00351',1,'folder.h']]],
+  ['max_5ffolders_54',['MAX_FOLDERS',['../folder_8h.html#a1c59837fb9755a361a0cb9f0e1991e1d',1,'folder.h']]]
 ];

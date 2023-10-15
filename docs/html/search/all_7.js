@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['help_42',['Help',['../main_8cpp.html#a54d17a6d0bb758f26b9dda4c6d8e8da8',1,'main.cpp']]]
+  ['name_20',['name',['../class_info.html#a1ac6e6a5e08ab37c0e1a33e2a859a1b0',1,'Info']]]
 ];
