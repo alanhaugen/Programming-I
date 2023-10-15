@@ -85,11 +85,15 @@ int main()
         }
         else if (input == "touch")
         {
-            activeFolder->AddFile();
+            cout << "Type name of file: ";
+            cin >> input;
+            activeFolder->AddFile(input);
         }
         else if (input == "mkdir")
         {
-            activeFolder->AddFolder();
+            cout << "Type name of folder: ";
+            cin >> input;
+            activeFolder->AddFolder(input);
         }
         else if (input == "quit")
         {

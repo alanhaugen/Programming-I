@@ -22,20 +22,43 @@ Folder::Folder(string _name)
     Init();
 }
 
-bool Folder::AddFolder()
+Folder::~Folder()
+{
+    delete[] folders;
+}
+
+bool Folder::AddFolder(string foldername = "empty")
 {
     if (folderQuantity < MAX_FOLDERS)
     {
+        Folder *tempFolders = new Folder[folderQuantity + 1];
+        tempFolders[folderQuantity].name = foldername;
+
+        for (unsigned int i = 0; i < folderQuantity; i++)
+        {
+            tempFolders[i] = folders[i];
+        }
+
+        delete[] folders;
+
+        folders = tempFolders;
+
+        folderQuantity++;
+
         return true;
     }
 
     return false;
 }
 
-bool Folder::AddFile()
+bool Folder::AddFile(string filename = "none")
 {
     if (fileQuantity < MAX_FILES)
     {
+        files[fileQuantity] = File();
+        files[fileQuantity].name = filename;
+        fileQuantity++;
+
         return true;
     }
 
@@ -44,18 +67,20 @@ bool Folder::AddFile()
 
 void Folder::PrintList()
 {
+    cout << "name" << "\t" << "size" << "\t" << "creation" << endl;
+
     // todo: sort by largest folder...
     for (unsigned int i = 0; i < folderQuantity; i++)
     {
-        cout << "- folder: " << folders[i].name << "\t" << folders[i].sizeInMB <<
-                folders[i].dateOfCreation << folders[i].dateOfCreation << "\n";
+        cout << "- folder: " << folders[i].name << "\t" << folders[i].sizeInMB << "\t" <<
+                folders[i].dateOfCreation << "\n";
     }
 
     // todo: sort by largest file...
     for (unsigned int i = 0; i < fileQuantity; i++)
     {
-        cout << files[i].name << "\t" << files[i].sizeInMB <<
-                files[i].dateOfCreation << files[i].dateOfCreation << "\n";
+        cout << files[i].name << "\t" << files[i].sizeInMB << "\t" <<
+                files[i].dateOfCreation << "\n";
     }
 }
 

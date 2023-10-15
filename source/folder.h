@@ -17,13 +17,14 @@ private:
 
 public:
     File files[MAX_FILES];
-    Folder *folders; // maximum of 5
+    Folder *folders;
 
     Folder();
+    ~Folder();
     Folder(string _name);
 
-    bool AddFolder();
-    bool AddFile();
+    bool AddFolder(string foldername);
+    bool AddFile(string filename);
 
     void PrintList();
     void PrintWorkingDirectory();
