@@ -1,0 +1,51 @@
+\hypertarget{inputfunctions_8h}{}\doxysection{source/inputfunctions.h File Reference}
+\label{inputfunctions_8h}\index{source/inputfunctions.h@{source/inputfunctions.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{inputfunctions_8h_ab713faf14b6a2389c02cda94d24ec808}{Get\+Integer}} (string message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Returns an integer, will ask user for an integer until a whole number is typed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{inputfunctions_8h_a54b963af1514c0fe941d334824200a9b}{Get\+Double}} (string message=\char`\"{}\char`\"{})
+\item 
+string \mbox{\hyperlink{inputfunctions_8h_a2332990400715ca8e2ec9cf83ec90e82}{Get\+String}} (string message=\char`\"{}\char`\"{})
+\item 
+unsigned int \mbox{\hyperlink{inputfunctions_8h_a5cc5f68a9b8844bf50b4917e2bc1d873}{Get\+Unsigned\+Integer}} (string message)
+\begin{DoxyCompactList}\small\item\em Returns an integer, will ask user for an integer until a whole positive number is typed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inputfunctions_8h_a54b963af1514c0fe941d334824200a9b}\label{inputfunctions_8h_a54b963af1514c0fe941d334824200a9b}} 
+\index{inputfunctions.h@{inputfunctions.h}!GetDouble@{GetDouble}}
+\index{GetDouble@{GetDouble}!inputfunctions.h@{inputfunctions.h}}
+\doxysubsubsection{\texorpdfstring{GetDouble()}{GetDouble()}}
+{\footnotesize\ttfamily double Get\+Double (\begin{DoxyParamCaption}\item[{string}]{message }\end{DoxyParamCaption})}
+
+Returns an double (high precision float), will ask user for an decimal number until a decimal number is typed N\+O\+TE\+: Decimal numbers are like this\+: 1.\+1 2.\+3 1.\+5 etc. (with a . ) Not\+: 1,1 2,3 1,5 etc. (C++ uses the American system) \mbox{\Hypertarget{inputfunctions_8h_ab713faf14b6a2389c02cda94d24ec808}\label{inputfunctions_8h_ab713faf14b6a2389c02cda94d24ec808}} 
+\index{inputfunctions.h@{inputfunctions.h}!GetInteger@{GetInteger}}
+\index{GetInteger@{GetInteger}!inputfunctions.h@{inputfunctions.h}}
+\doxysubsubsection{\texorpdfstring{GetInteger()}{GetInteger()}}
+{\footnotesize\ttfamily int Get\+Integer (\begin{DoxyParamCaption}\item[{string}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Returns an integer, will ask user for an integer until a whole number is typed. 
+
+\mbox{\Hypertarget{inputfunctions_8h_a2332990400715ca8e2ec9cf83ec90e82}\label{inputfunctions_8h_a2332990400715ca8e2ec9cf83ec90e82}} 
+\index{inputfunctions.h@{inputfunctions.h}!GetString@{GetString}}
+\index{GetString@{GetString}!inputfunctions.h@{inputfunctions.h}}
+\doxysubsubsection{\texorpdfstring{GetString()}{GetString()}}
+{\footnotesize\ttfamily string Get\+String (\begin{DoxyParamCaption}\item[{string}]{message }\end{DoxyParamCaption})}
+
+Returns a string (letters), will ask user for letter characters until they have been typed \mbox{\Hypertarget{inputfunctions_8h_a5cc5f68a9b8844bf50b4917e2bc1d873}\label{inputfunctions_8h_a5cc5f68a9b8844bf50b4917e2bc1d873}} 
+\index{inputfunctions.h@{inputfunctions.h}!GetUnsignedInteger@{GetUnsignedInteger}}
+\index{GetUnsignedInteger@{GetUnsignedInteger}!inputfunctions.h@{inputfunctions.h}}
+\doxysubsubsection{\texorpdfstring{GetUnsignedInteger()}{GetUnsignedInteger()}}
+{\footnotesize\ttfamily unsigned int Get\+Unsigned\+Integer (\begin{DoxyParamCaption}\item[{string}]{message }\end{DoxyParamCaption})}
+
+
+
+Returns an integer, will ask user for an integer until a whole positive number is typed. 
+

@@ -42,4 +42,4 @@ $(PDF): README.md
 	pandoc README.md -f markdown -t pdf -o $(PDF)
 
 docs:
-	doxygen docs
+	doxygen doc

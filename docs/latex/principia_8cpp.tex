@@ -1,0 +1,146 @@
+\hypertarget{principia_8cpp}{}\doxysection{source/principia.cpp File Reference}
+\label{principia_8cpp}\index{source/principia.cpp@{source/principia.cpp}}
+{\ttfamily \#include \char`\"{}principia.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}calc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inputfunctions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}polynomial.\+h\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9}{yytokentype}} \{ \newline
+\mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12a90dfe20486bbe3e075afcd19ef2d0}{N\+U\+M\+B\+ER}} = 258, 
+\mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9acfcf145f2788bf340ff3f3098bc54909}{A\+DD}} = 259, 
+\mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12b733d4941495e86811fe6ceeeff9da}{S\+UB}} = 260, 
+\mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a086ab1f2f4dac104b6826ebe0eaba8fd}{M\+UL}} = 261, 
+\newline
+\mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a8565f0d60c3ba6d468661c49d86e9744}{D\+IV}} = 262, 
+\mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a62f7ef0a404defa34640e94940792147}{A\+BS}} = 263, 
+\mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a34f27712bd95a0c2c963cd56365ad7a2}{E\+OL}} = 264, 
+\mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12a90dfe20486bbe3e075afcd19ef2d0}{N\+U\+M\+B\+ER}} = 258, 
+\newline
+\mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9acfcf145f2788bf340ff3f3098bc54909}{A\+DD}} = 259, 
+\mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12b733d4941495e86811fe6ceeeff9da}{S\+UB}} = 260, 
+\mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a086ab1f2f4dac104b6826ebe0eaba8fd}{M\+UL}} = 261, 
+\mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a8565f0d60c3ba6d468661c49d86e9744}{D\+IV}} = 262, 
+\newline
+\mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a62f7ef0a404defa34640e94940792147}{A\+BS}} = 263, 
+\mbox{\hyperlink{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a34f27712bd95a0c2c963cd56365ad7a2}{E\+OL}} = 264
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long long int \mbox{\hyperlink{principia_8cpp_aef86cc84c39d55ea8d0546d7f7755ae6}{Factorial}} (unsigned int n)
+\item 
+void \mbox{\hyperlink{principia_8cpp_a86075f41a0128de8aa221c52a75f6e1e}{Solve\+Polynomial}} ()
+\item 
+void \mbox{\hyperlink{principia_8cpp_a9c385a47adf1e0f21024ee9e09ddc00c}{Calc}} ()
+\begin{DoxyCompactList}\small\item\em Do basic calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{principia_8cpp_a6ff5512dbece2597d4fb6c9427e8db54}{yylval}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9}} 
+\index{principia.cpp@{principia.cpp}!yytokentype@{yytokentype}}
+\index{yytokentype@{yytokentype}!principia.cpp@{principia.cpp}}
+\doxysubsubsection{\texorpdfstring{yytokentype}{yytokentype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{calc_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9}{yytokentype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUMBER@{NUMBER}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!NUMBER@{NUMBER}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12a90dfe20486bbe3e075afcd19ef2d0}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12a90dfe20486bbe3e075afcd19ef2d0}} 
+N\+U\+M\+B\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADD@{ADD}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!ADD@{ADD}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9acfcf145f2788bf340ff3f3098bc54909}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9acfcf145f2788bf340ff3f3098bc54909}} 
+A\+DD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB@{SUB}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!SUB@{SUB}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12b733d4941495e86811fe6ceeeff9da}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12b733d4941495e86811fe6ceeeff9da}} 
+S\+UB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MUL@{MUL}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!MUL@{MUL}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a086ab1f2f4dac104b6826ebe0eaba8fd}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a086ab1f2f4dac104b6826ebe0eaba8fd}} 
+M\+UL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIV@{DIV}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!DIV@{DIV}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a8565f0d60c3ba6d468661c49d86e9744}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a8565f0d60c3ba6d468661c49d86e9744}} 
+D\+IV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ABS@{ABS}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!ABS@{ABS}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a62f7ef0a404defa34640e94940792147}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a62f7ef0a404defa34640e94940792147}} 
+A\+BS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOL@{EOL}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!EOL@{EOL}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a34f27712bd95a0c2c963cd56365ad7a2}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a34f27712bd95a0c2c963cd56365ad7a2}} 
+E\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUMBER@{NUMBER}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!NUMBER@{NUMBER}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12a90dfe20486bbe3e075afcd19ef2d0}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12a90dfe20486bbe3e075afcd19ef2d0}} 
+N\+U\+M\+B\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADD@{ADD}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!ADD@{ADD}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9acfcf145f2788bf340ff3f3098bc54909}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9acfcf145f2788bf340ff3f3098bc54909}} 
+A\+DD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB@{SUB}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!SUB@{SUB}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12b733d4941495e86811fe6ceeeff9da}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a12b733d4941495e86811fe6ceeeff9da}} 
+S\+UB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MUL@{MUL}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!MUL@{MUL}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a086ab1f2f4dac104b6826ebe0eaba8fd}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a086ab1f2f4dac104b6826ebe0eaba8fd}} 
+M\+UL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIV@{DIV}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!DIV@{DIV}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a8565f0d60c3ba6d468661c49d86e9744}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a8565f0d60c3ba6d468661c49d86e9744}} 
+D\+IV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ABS@{ABS}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!ABS@{ABS}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a62f7ef0a404defa34640e94940792147}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a62f7ef0a404defa34640e94940792147}} 
+A\+BS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOL@{EOL}!principia.cpp@{principia.cpp}}\index{principia.cpp@{principia.cpp}!EOL@{EOL}}}\mbox{\Hypertarget{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a34f27712bd95a0c2c963cd56365ad7a2}\label{principia_8cpp_a15c9f7bd2f0e9686df5d9df4f3314aa9a34f27712bd95a0c2c963cd56365ad7a2}} 
+E\+OL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{principia_8cpp_a9c385a47adf1e0f21024ee9e09ddc00c}\label{principia_8cpp_a9c385a47adf1e0f21024ee9e09ddc00c}} 
+\index{principia.cpp@{principia.cpp}!Calc@{Calc}}
+\index{Calc@{Calc}!principia.cpp@{principia.cpp}}
+\doxysubsubsection{\texorpdfstring{Calc()}{Calc()}}
+{\footnotesize\ttfamily void Calc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Do basic calculations. 
+
+\mbox{\Hypertarget{principia_8cpp_aef86cc84c39d55ea8d0546d7f7755ae6}\label{principia_8cpp_aef86cc84c39d55ea8d0546d7f7755ae6}} 
+\index{principia.cpp@{principia.cpp}!Factorial@{Factorial}}
+\index{Factorial@{Factorial}!principia.cpp@{principia.cpp}}
+\doxysubsubsection{\texorpdfstring{Factorial()}{Factorial()}}
+{\footnotesize\ttfamily unsigned long long int Factorial (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+Calculate factorial (n!) recursively
+
+This function will only accept positive numbers and will output an error if n $>$ 20 since factorials of this size are outside the range of unsigned long long int \mbox{\Hypertarget{principia_8cpp_a86075f41a0128de8aa221c52a75f6e1e}\label{principia_8cpp_a86075f41a0128de8aa221c52a75f6e1e}} 
+\index{principia.cpp@{principia.cpp}!SolvePolynomial@{SolvePolynomial}}
+\index{SolvePolynomial@{SolvePolynomial}!principia.cpp@{principia.cpp}}
+\doxysubsubsection{\texorpdfstring{SolvePolynomial()}{SolvePolynomial()}}
+{\footnotesize\ttfamily void Solve\+Polynomial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function which allows user to put in two polynomials and do addition, substraction, multiplication and division 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{principia_8cpp_a6ff5512dbece2597d4fb6c9427e8db54}\label{principia_8cpp_a6ff5512dbece2597d4fb6c9427e8db54}} 
+\index{principia.cpp@{principia.cpp}!yylval@{yylval}}
+\index{yylval@{yylval}!principia.cpp@{principia.cpp}}
+\doxysubsubsection{\texorpdfstring{yylval}{yylval}}
+{\footnotesize\ttfamily int yylval}
+
