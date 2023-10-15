@@ -1,10 +1,19 @@
 #include "file.h"
 
 #include <stdlib.h>
+#include <chrono>
+#include <ctime>
 
 File::File()
 {
     name = "none";
     sizeInMB = arc4random() % 100;
-    dateOfCreation = 2023;
+
+    auto end = chrono::system_clock::now();
+    time_t end_time = chrono::system_clock::to_time_t(end);
+
+    char* time = ctime(&end_time);
+    if (time[strlen(time)-1] == '\n') time[strlen(time)-1] = '\0';
+
+    dateOfCreation = time;
 }

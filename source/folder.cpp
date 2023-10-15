@@ -1,6 +1,9 @@
 #include "folder.h"
 #include <iostream>
 
+#include <stdio.h>
+#include <string.h>
+
 using namespace std;
 
 void Folder::Init()
@@ -8,6 +11,14 @@ void Folder::Init()
     folderQuantity = 0;
     fileQuantity = 0;
     parentFolder = NULL;
+
+    auto end = chrono::system_clock::now();
+    time_t end_time = chrono::system_clock::to_time_t(end);
+
+    char* time = ctime(&end_time);
+    if (time[strlen(time)-1] == '\n') time[strlen(time)-1] = '\0';
+
+    dateOfCreation = time;
 }
 
 Folder::Folder()

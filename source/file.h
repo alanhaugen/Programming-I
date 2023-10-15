@@ -10,7 +10,7 @@ class Info
 public:
     string name;
     int sizeInMB;
-    int dateOfCreation;
+    string dateOfCreation;
 };
 
 class File : public Info

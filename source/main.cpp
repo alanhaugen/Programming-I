@@ -98,7 +98,7 @@ int main()
         }
         else if (input == "cd")
         {
-            cout << "Type name of folder: ";
+            cout << "Type name of folder (type .. to go up a folder): ";
             cin >> input;
             activeFolder = activeFolder->GetFolder(input);
         }
