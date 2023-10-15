@@ -7,7 +7,7 @@
 File::File()
 {
     name = "none";
-    sizeInMB = arc4random() % 100;
+    sizeInMB = rand() % 100;
 
     auto end = chrono::system_clock::now();
     time_t end_time = chrono::system_clock::to_time_t(end);

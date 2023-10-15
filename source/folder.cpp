@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <chrono>
 
 using namespace std;
 
@@ -11,6 +12,7 @@ void Folder::Init()
     folderQuantity = 0;
     fileQuantity = 0;
     parentFolder = NULL;
+    folders = NULL;
 
     auto end = chrono::system_clock::now();
     time_t end_time = chrono::system_clock::to_time_t(end);
