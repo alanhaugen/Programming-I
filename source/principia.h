@@ -12,4 +12,8 @@ public:
     Principia();
 };
 
+unsigned long long Factorial(unsigned int n);
+void Calc();
+void SolvePolynomial();
+
 #endif // PRINCIPIA_H
