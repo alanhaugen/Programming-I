@@ -14,7 +14,7 @@ I have made three classes.
 * File
 * Info
 
-The relationship looks like this:
+The relationship looks like this: (See figure 1)
 
 ![UML](figures/uml.png)
 
