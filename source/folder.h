@@ -11,6 +11,7 @@ class Folder : public Info
 private:
     unsigned int folderQuantity;
     unsigned int fileQuantity;
+    Folder *parentFolder;
 
     void Init();
 
@@ -25,6 +26,7 @@ public:
     bool AddFile();
 
     void PrintList();
+    void PrintWorkingDirectory();
     int GetSizeInMB();
 };
 

@@ -7,6 +7,7 @@ void Folder::Init()
 {
     folderQuantity = 0;
     fileQuantity = 0;
+    parentFolder = NULL;
 }
 
 Folder::Folder()
@@ -55,6 +56,14 @@ void Folder::PrintList()
     {
         cout << files[i].name << "\t" << files[i].sizeInMB <<
                 files[i].dateOfCreation << files[i].dateOfCreation << "\n";
+    }
+}
+
+void Folder::PrintWorkingDirectory()
+{
+    if (parentFolder == NULL)
+    {
+        cout << name << endl;
     }
 }
 

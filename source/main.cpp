@@ -52,9 +52,9 @@
 
 void Help()
 {
-    cout << "Type ls to list files, pwd to print working directory, "
-            "cd to change directory, touch to make a new file, mkdir"
-            " to make a new directory. Type help to get this message"
+    cout << "Type ls to list files, pwd to print working directory,\n"
+            "cd to change directory, touch to make a new file, mkdir\n"
+            "to make a new directory. Type help to get this message\n"
             "again. Type quit to quit.\n\n";
 }
 
@@ -81,7 +81,7 @@ int main()
         }
         else if (input == "pwd")
         {
-            cout << activeFolder->name << endl;
+            activeFolder->PrintWorkingDirectory();
         }
         else if (input == "touch")
         {
