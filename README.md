@@ -20,6 +20,8 @@ The relationship looks like this:
 
 Info contains name, size and date information.
 
+The diagram also shows the control flow of the program and all the available commands to traverse the file system to create and touch files and folders.
+
 ## A brief paragraph describing where you feel you are with programming, what do you feel most comfortable doing from what you\'ve learned this year, and what you feel you need to improve on the most from what you've learned this year
 
 What I have learnt about UML.
