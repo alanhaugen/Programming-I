@@ -7,6 +7,8 @@ CppApplication {
         "source/calc.lex",
         "source/file.cpp",
         "source/file.h",
+        "source/folder.cpp",
+        "source/folder.h",
         "source/inputfunctions.cpp",
         "source/inputfunctions.h",
         "source/main.cpp",

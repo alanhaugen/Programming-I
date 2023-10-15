@@ -47,14 +47,63 @@
  *
 */
 
-//#include "principia.h"
+#include "folder.h"
 #include "file.h"
+
+void Help()
+{
+    cout << "Type ls to list files, pwd to print working directory, "
+            "cd to change directory, touch to make a new file, mkdir"
+            " to make a new directory. Type help to get this message"
+            "again. Type quit to quit.\n\n";
+}
 
 /// The main entry point of the program
 int main()
 {
-    //Principia princ;
-    File files[10];
+    Folder root("/");
+    Folder *activeFolder = &root;
+
+    cout << "Alux user interface\n\n";
+
+    Help();
+
+    bool isAlive = true;
+    string input;
+
+    while (isAlive)
+    {
+        cin >> input;
+
+        if (input == "ls")
+        {
+            activeFolder->PrintList();
+        }
+        else if (input == "pwd")
+        {
+            cout << activeFolder->name << endl;
+        }
+        else if (input == "touch")
+        {
+            activeFolder->AddFile();
+        }
+        else if (input == "mkdir")
+        {
+            activeFolder->AddFolder();
+        }
+        else if (input == "quit")
+        {
+            isAlive = false;
+        }
+        else if (input == "help")
+        {
+            Help();
+        }
+        else
+        {
+            cout << input << ": command not found\n";
+        }
+    }
 
     return 0;
 }
