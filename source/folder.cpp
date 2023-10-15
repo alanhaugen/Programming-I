@@ -31,8 +31,9 @@ bool Folder::AddFolder(string foldername = "empty")
 {
     if (folderQuantity < MAX_FOLDERS)
     {
-        Folder *tempFolders = new Folder[folderQuantity + 1];
+        Folder* tempFolders = new Folder[folderQuantity + 1];
         tempFolders[folderQuantity].name = foldername;
+        tempFolders[folderQuantity].parentFolder = this;
 
         for (unsigned int i = 0; i < folderQuantity; i++)
         {
@@ -48,6 +49,8 @@ bool Folder::AddFolder(string foldername = "empty")
         return true;
     }
 
+    cout << "Error: This exceeds the limit of max allowed folders\n";
+
     return false;
 }
 
@@ -62,6 +65,8 @@ bool Folder::AddFile(string filename = "none")
         return true;
     }
 
+    cout << "Error: This exceeds the limit of max allowed files\n";
+
     return false;
 }
 
@@ -72,7 +77,7 @@ void Folder::PrintList()
     // todo: sort by largest folder...
     for (unsigned int i = 0; i < folderQuantity; i++)
     {
-        cout << "- folder: " << folders[i].name << "\t" << folders[i].sizeInMB << "\t" <<
+        cout << "- " << folders[i].name << "\t" << folders[i].GetSizeInMB() << "\t" <<
                 folders[i].dateOfCreation << "\n";
     }
 
@@ -84,15 +89,73 @@ void Folder::PrintList()
     }
 }
 
+void Folder::PrintRecursive(Folder *ptr)
+{
+    if (ptr == NULL)
+        return;
+
+    PrintRecursive(ptr->parentFolder);
+
+    cout << ptr->name << "/";
+}
+
 void Folder::PrintWorkingDirectory()
 {
-    if (parentFolder == NULL)
+    PrintRecursive(this);
+    cout << endl;
+}
+
+void Folder::PrintLargestFileInfo()
+{
+    File largest;
+    largest.sizeInMB = -1;
+
+    for (unsigned int i = 0; i < fileQuantity; i++)
     {
-        cout << name << endl;
+        if (files[i].sizeInMB > largest.sizeInMB)
+        {
+            largest = files[i];
+        }
+    }
+
+    if (largest.sizeInMB > 0)
+    {
+        cout << largest.name << "\t" << largest.sizeInMB << "\t" <<
+                largest.dateOfCreation << "\n";
     }
 }
 
 int Folder::GetSizeInMB()
 {
-    return 0;
+    int filesize = 0;
+
+    for (unsigned int i = 0; i < fileQuantity; i++)
+    {
+        filesize += files[i].sizeInMB;
+    }
+
+    return filesize;
+}
+
+Folder* Folder::GetFolder(string foldername)
+{
+    if  (foldername == "..")
+    {
+        if (parentFolder != NULL)
+        {
+            return parentFolder;
+        }
+    }
+
+    for (unsigned int i = 0; i < folderQuantity; i++)
+    {
+        if (folders[i].name == foldername)
+        {
+            return &folders[i];
+        }
+    }
+
+    cout << "Error: no such folder\n";
+
+    return this;
 }

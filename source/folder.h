@@ -11,7 +11,7 @@ class Folder : public Info
 private:
     unsigned int folderQuantity;
     unsigned int fileQuantity;
-    Folder *parentFolder;
+    Folder* parentFolder;
 
     void Init();
 
@@ -27,8 +27,11 @@ public:
     bool AddFile(string filename);
 
     void PrintList();
+    void PrintRecursive(Folder* ptr);
     void PrintWorkingDirectory();
+    void PrintLargestFileInfo();
     int GetSizeInMB();
+    Folder* GetFolder(string foldername);
 };
 
 #endif // FOLDER_H

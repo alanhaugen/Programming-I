@@ -55,7 +55,8 @@ void Help()
     cout << "Type ls to list files, pwd to print working directory,\n"
             "cd to change directory, touch to make a new file, mkdir\n"
             "to make a new directory. Type help to get this message\n"
-            "again. Type quit to quit.\n\n";
+            "again. Type sort to get info on the largest file in folder."
+            "Type quit to quit.\n\n";
 }
 
 /// The main entry point of the program
@@ -95,9 +96,19 @@ int main()
             cin >> input;
             activeFolder->AddFolder(input);
         }
+        else if (input == "cd")
+        {
+            cout << "Type name of folder: ";
+            cin >> input;
+            activeFolder = activeFolder->GetFolder(input);
+        }
         else if (input == "quit")
         {
             isAlive = false;
+        }
+        else if (input == "sort")
+        {
+            activeFolder->PrintLargestFileInfo();
         }
         else if (input == "help")
         {
