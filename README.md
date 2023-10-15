@@ -28,6 +28,8 @@ I have also used played a bit with flex and bison for making calculators which d
 
 I feel I need to learn more about UML and try to understand how such diagrams can be useful for programmers.
 
+I tried using nomnoml to create the UML, but I still know so little about UML I am not sure how useful the diagram ends up being [https://nomnoml.com/](https://nomnoml.com/).
+
 ## Documentation
 
 I have used Doxygen to generate pretty documentation (XML).
