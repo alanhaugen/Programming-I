@@ -24,7 +24,7 @@ Info contains name, size and date information.
 
 What I have learnt about UML.
 
-I have also used played a bit with flex and bison for making calculators which does PEMDAS correctly. I want to look into recreating the Silicon Graphics program fsn, as seen in Jurrasic Park, for fun.
+I have also used played a bit with flex and bison for making calculators which does PEMDAS correctly. I want to look into recreating the Silicon Graphics program fsn, as seen in Jurrassic Park.
 
 I feel I need to learn more about UML and try to understand how such diagrams can be useful for programmers.
 
