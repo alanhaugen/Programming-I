@@ -38,7 +38,7 @@ clean:
 run: app
 	./app
 
-$(PDF): README.md
+$(PDF): README.md figures
 	pandoc README.md -f markdown -t pdf -o $(PDF)
 
 docs:

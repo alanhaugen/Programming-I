@@ -87,14 +87,12 @@ void Folder::PrintList()
 {
     cout << "name" << "\t" << "size" << "\t" << "creation" << endl;
 
-    // todo: sort by largest folder...
     for (unsigned int i = 0; i < folderQuantity; i++)
     {
         cout << "- " << folders[i].name << "\t" << folders[i].GetSizeInMB() << "\t" <<
                 folders[i].dateOfCreation << "\n";
     }
 
-    // todo: sort by largest file...
     for (unsigned int i = 0; i < fileQuantity; i++)
     {
         cout << files[i].name << "\t" << files[i].sizeInMB << "\t" <<
@@ -145,6 +143,14 @@ int Folder::GetSizeInMB()
     for (unsigned int i = 0; i < fileQuantity; i++)
     {
         filesize += files[i].sizeInMB;
+    }
+
+    if (folderQuantity != 0)
+    {
+        for (unsigned int i = 0; i < folderQuantity; i++)
+        {
+            filesize += folders[i].GetSizeInMB();
+        }
     }
 
     return filesize;
