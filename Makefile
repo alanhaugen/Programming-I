@@ -1,6 +1,6 @@
 .PHONY: all docs clean run
 
-PDF = Haugen_HansAlanWhitburn_Compulsory2.pdf
+PDF = Haugen_HansAlanWhitburn_Compulsory3.pdf
 
 all: app $(PDF)
 
