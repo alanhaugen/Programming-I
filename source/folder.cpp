@@ -113,7 +113,6 @@ void Folder::PrintRecursive(Folder *ptr)
 void Folder::PrintWorkingDirectory()
 {
     PrintRecursive(this);
-    cout << endl;
 }
 
 void Folder::PrintLargestFileInfo()

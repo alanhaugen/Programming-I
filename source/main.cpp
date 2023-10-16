@@ -74,6 +74,8 @@ int main()
 
     while (isAlive)
     {
+        activeFolder->PrintWorkingDirectory();
+        cout << "$ ";
         cin >> input;
 
         if (input == "ls")
@@ -83,6 +85,7 @@ int main()
         else if (input == "pwd")
         {
             activeFolder->PrintWorkingDirectory();
+            cout <<  endl;
         }
         else if (input == "touch")
         {
