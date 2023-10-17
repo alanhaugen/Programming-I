@@ -26,6 +26,8 @@ public:
     bool AddFolder(string foldername);
     bool AddFile(string filename);
 
+    bool MoveFileOrFolder(string filename, string newname);
+
     void PrintList();
     void PrintRecursive(Folder* ptr);
     void PrintWorkingDirectory();

@@ -83,6 +83,29 @@ bool Folder::AddFile(string filename = "none")
     return false;
 }
 
+bool Folder::MoveFileOrFolder(string filename, string newname)
+{
+    for (unsigned int i = 0; i < folderQuantity; i++)
+    {
+        if (folders[i].name == filename)
+        {
+            folders[i].name = newname;
+            return true;
+        }
+    }
+
+    for (unsigned int i = 0; i < fileQuantity; i++)
+    {
+        if (files[i].name == filename)
+        {
+            files[i].name = newname;
+            return true;
+        }
+    }
+
+    return false;
+}
+
 void Folder::PrintList()
 {
     cout << "name" << "\t" << "size" << "\t" << "creation" << endl;

@@ -56,6 +56,7 @@ void Help()
             "cd to change directory, touch to make a new file, mkdir\n"
             "to make a new directory. Type help to get this message\n"
             "again. Type sort to get info on the largest file in folder."
+            "Type mv to change the name of a file or folder."
             "Type quit to quit.\n\n";
 }
 
@@ -71,11 +72,10 @@ int main()
 
     bool isAlive = true;
     string input;
+    string option;
 
     while (isAlive)
     {
-        activeFolder->PrintWorkingDirectory();
-        cout << "$ ";
         cin >> input;
 
         if (input == "ls")
@@ -103,6 +103,7 @@ int main()
         {
             cout << "Type name of folder (type .. to go up a folder): ";
             cin >> input;
+
             activeFolder = activeFolder->GetFolder(input);
         }
         else if (input == "quit")
@@ -112,6 +113,18 @@ int main()
         else if (input == "sort")
         {
             activeFolder->PrintLargestFileInfo();
+        }
+        else if (input == "mv")
+        {
+            cout << "Type name of the file or folder you want to move: ";
+            cin >> input;
+            cout << "Type the new name of the file or folder: ";
+            cin >> option;
+
+            if (activeFolder->MoveFileOrFolder(input, option) == false)
+            {
+                cout << "Error: Failed to rename file or folder/n";
+            }
         }
         else if (input == "help")
         {
