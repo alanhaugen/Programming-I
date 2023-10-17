@@ -4,6 +4,11 @@
 #include <chrono>
 #include <ctime>
 
+/// File Constructor
+///
+/// This is the only method for File
+/// All it does it set a random filesize
+/// and set the date of creation
 File::File()
 {
     name = "none";

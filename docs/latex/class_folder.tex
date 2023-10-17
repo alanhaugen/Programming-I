@@ -23,6 +23,8 @@ bool \mbox{\hyperlink{class_folder_a318539c9efa8402c1bc11fbf2ebc2863}{Add\+Folde
 \item 
 bool \mbox{\hyperlink{class_folder_a26a65bc34204f98fbfdd05d58b6b12f7}{Add\+File}} (string filename)
 \item 
+bool \mbox{\hyperlink{class_folder_a293d0e7babf0581865addc13a14e9b87}{Move\+File\+Or\+Folder}} (string filename, string newname)
+\item 
 void \mbox{\hyperlink{class_folder_ae759a37f3a0be91eb424ca6445fff27d}{Print\+List}} ()
 \item 
 void \mbox{\hyperlink{class_folder_a913ba48e6aea464002a4e5ccfd1932b4}{Print\+Recursive}} (\mbox{\hyperlink{class_folder}{Folder}} $\ast$ptr)
@@ -51,19 +53,25 @@ int \mbox{\hyperlink{class_folder_a1c4f20763a280f80c91d3f3fcb915235}{Get\+Size\+
 \doxysubsubsection{\texorpdfstring{Folder()}{Folder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Folder\+::\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_a7b9eaf0f340d5275809494685b0a3e1d}\label{class_folder_a7b9eaf0f340d5275809494685b0a3e1d}} 
+\mbox{\hyperlink{class_folder}{Folder}} default constructor
+
+This is called when a new file is created \mbox{\Hypertarget{class_folder_a7b9eaf0f340d5275809494685b0a3e1d}\label{class_folder_a7b9eaf0f340d5275809494685b0a3e1d}} 
 \index{Folder@{Folder}!````~Folder@{$\sim$Folder}}
 \index{````~Folder@{$\sim$Folder}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{$\sim$Folder()}{~Folder()}}
 {\footnotesize\ttfamily Folder\+::$\sim$\+Folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_a008b04a545e4bf2022de1ed686bfd7d2}\label{class_folder_a008b04a545e4bf2022de1ed686bfd7d2}} 
+\mbox{\hyperlink{class_folder}{Folder}} destructor
+
+This is called when a file deleted with delete \mbox{\Hypertarget{class_folder_a008b04a545e4bf2022de1ed686bfd7d2}\label{class_folder_a008b04a545e4bf2022de1ed686bfd7d2}} 
 \index{Folder@{Folder}!Folder@{Folder}}
 \index{Folder@{Folder}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{Folder()}{Folder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Folder\+::\+Folder (\begin{DoxyParamCaption}\item[{string}]{\+\_\+name }\end{DoxyParamCaption})}
 
+\mbox{\hyperlink{class_folder}{Folder}} constructor
 
+This is called when a new file is created with a name 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_folder_a26a65bc34204f98fbfdd05d58b6b12f7}\label{class_folder_a26a65bc34204f98fbfdd05d58b6b12f7}} 
@@ -72,49 +80,73 @@ int \mbox{\hyperlink{class_folder_a1c4f20763a280f80c91d3f3fcb915235}{Get\+Size\+
 \doxysubsubsection{\texorpdfstring{AddFile()}{AddFile()}}
 {\footnotesize\ttfamily bool Folder\+::\+Add\+File (\begin{DoxyParamCaption}\item[{string}]{filename = {\ttfamily \char`\"{}none\char`\"{}} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_a318539c9efa8402c1bc11fbf2ebc2863}\label{class_folder_a318539c9efa8402c1bc11fbf2ebc2863}} 
+Add file method for folder
+
+This is used to add files to a folder \mbox{\Hypertarget{class_folder_a318539c9efa8402c1bc11fbf2ebc2863}\label{class_folder_a318539c9efa8402c1bc11fbf2ebc2863}} 
 \index{Folder@{Folder}!AddFolder@{AddFolder}}
 \index{AddFolder@{AddFolder}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{AddFolder()}{AddFolder()}}
 {\footnotesize\ttfamily bool Folder\+::\+Add\+Folder (\begin{DoxyParamCaption}\item[{string}]{foldername = {\ttfamily \char`\"{}empty\char`\"{}} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_ace64c7e0726b55c6702c8874ab738962}\label{class_folder_ace64c7e0726b55c6702c8874ab738962}} 
+Add folder method for folder
+
+This is used to add folders to a folder \mbox{\Hypertarget{class_folder_ace64c7e0726b55c6702c8874ab738962}\label{class_folder_ace64c7e0726b55c6702c8874ab738962}} 
 \index{Folder@{Folder}!GetFolder@{GetFolder}}
 \index{GetFolder@{GetFolder}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{GetFolder()}{GetFolder()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_folder}{Folder}} $\ast$ Folder\+::\+Get\+Folder (\begin{DoxyParamCaption}\item[{string}]{foldername }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_a1c4f20763a280f80c91d3f3fcb915235}\label{class_folder_a1c4f20763a280f80c91d3f3fcb915235}} 
+Get \mbox{\hyperlink{class_folder}{Folder}} methid
+
+This method is used get a pointer to a folder The folder has to exist in the current folder. \mbox{\Hypertarget{class_folder_a1c4f20763a280f80c91d3f3fcb915235}\label{class_folder_a1c4f20763a280f80c91d3f3fcb915235}} 
 \index{Folder@{Folder}!GetSizeInMB@{GetSizeInMB}}
 \index{GetSizeInMB@{GetSizeInMB}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{GetSizeInMB()}{GetSizeInMB()}}
 {\footnotesize\ttfamily int Folder\+::\+Get\+Size\+In\+MB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_a42574e8f6b94d56daf857457d1a92cdb}\label{class_folder_a42574e8f6b94d56daf857457d1a92cdb}} 
+Get Size In MB
+
+This method is used to find filesize of all the files in a folder \mbox{\Hypertarget{class_folder_a293d0e7babf0581865addc13a14e9b87}\label{class_folder_a293d0e7babf0581865addc13a14e9b87}} 
+\index{Folder@{Folder}!MoveFileOrFolder@{MoveFileOrFolder}}
+\index{MoveFileOrFolder@{MoveFileOrFolder}!Folder@{Folder}}
+\doxysubsubsection{\texorpdfstring{MoveFileOrFolder()}{MoveFileOrFolder()}}
+{\footnotesize\ttfamily bool Folder\+::\+Move\+File\+Or\+Folder (\begin{DoxyParamCaption}\item[{string}]{filename,  }\item[{string}]{newname }\end{DoxyParamCaption})}
+
+Move file or folder method for folder
+
+This is used to move filels and folders in a folder \mbox{\Hypertarget{class_folder_a42574e8f6b94d56daf857457d1a92cdb}\label{class_folder_a42574e8f6b94d56daf857457d1a92cdb}} 
 \index{Folder@{Folder}!PrintLargestFileInfo@{PrintLargestFileInfo}}
 \index{PrintLargestFileInfo@{PrintLargestFileInfo}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{PrintLargestFileInfo()}{PrintLargestFileInfo()}}
 {\footnotesize\ttfamily void Folder\+::\+Print\+Largest\+File\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_ae759a37f3a0be91eb424ca6445fff27d}\label{class_folder_ae759a37f3a0be91eb424ca6445fff27d}} 
+Print Largest \mbox{\hyperlink{class_file}{File}} \mbox{\hyperlink{class_info}{Info}}
+
+Prints largest file in folder \mbox{\Hypertarget{class_folder_ae759a37f3a0be91eb424ca6445fff27d}\label{class_folder_ae759a37f3a0be91eb424ca6445fff27d}} 
 \index{Folder@{Folder}!PrintList@{PrintList}}
 \index{PrintList@{PrintList}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{PrintList()}{PrintList()}}
 {\footnotesize\ttfamily void Folder\+::\+Print\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_a913ba48e6aea464002a4e5ccfd1932b4}\label{class_folder_a913ba48e6aea464002a4e5ccfd1932b4}} 
+Print List
+
+This will cout (print) all pf the folders and files in a folder. Folders will have a minus (-\/ ) preceding it\textquotesingle{}s output \mbox{\Hypertarget{class_folder_a913ba48e6aea464002a4e5ccfd1932b4}\label{class_folder_a913ba48e6aea464002a4e5ccfd1932b4}} 
 \index{Folder@{Folder}!PrintRecursive@{PrintRecursive}}
 \index{PrintRecursive@{PrintRecursive}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{PrintRecursive()}{PrintRecursive()}}
 {\footnotesize\ttfamily void Folder\+::\+Print\+Recursive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_folder}{Folder}} $\ast$}]{ptr }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_folder_a414dd5cad33d72f763493427dece14a9}\label{class_folder_a414dd5cad33d72f763493427dece14a9}} 
+Print Recursive helper method
+
+This is a helper method for Print\+Working\+Directory The function is recursive and is used to work where the folder is in the file hierarchy \mbox{\Hypertarget{class_folder_a414dd5cad33d72f763493427dece14a9}\label{class_folder_a414dd5cad33d72f763493427dece14a9}} 
 \index{Folder@{Folder}!PrintWorkingDirectory@{PrintWorkingDirectory}}
 \index{PrintWorkingDirectory@{PrintWorkingDirectory}!Folder@{Folder}}
 \doxysubsubsection{\texorpdfstring{PrintWorkingDirectory()}{PrintWorkingDirectory()}}
 {\footnotesize\ttfamily void Folder\+::\+Print\+Working\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Print Working Directory method
 
+Prints where the folder is in the file hierarchy 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{class_folder_a42972015c89db0e7424b512aad3ec385}\label{class_folder_a42972015c89db0e7424b512aad3ec385}} 

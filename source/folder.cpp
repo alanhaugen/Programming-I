@@ -7,6 +7,9 @@
 
 using namespace std;
 
+/// Init function
+///
+/// This is called in the constructors to avoid code duplication
 void Folder::Init()
 {
     folderQuantity = 0;
@@ -23,11 +26,17 @@ void Folder::Init()
     dateOfCreation = time;
 }
 
+/// Folder default constructor
+///
+/// This is called when a new file is created
 Folder::Folder()
 {
     Init();
 }
 
+/// Folder constructor
+///
+/// This is called when a new file is created with a name
 Folder::Folder(string _name)
 {
     name = _name;
@@ -35,11 +44,17 @@ Folder::Folder(string _name)
     Init();
 }
 
+/// Folder destructor
+///
+/// This is called when a file deleted with delete
 Folder::~Folder()
 {
     delete[] folders;
 }
 
+/// Add folder method for folder
+///
+/// This is used to add folders to a folder
 bool Folder::AddFolder(string foldername = "empty")
 {
     if (folderQuantity < MAX_FOLDERS)
@@ -67,6 +82,9 @@ bool Folder::AddFolder(string foldername = "empty")
     return false;
 }
 
+/// Add file method for folder
+///
+/// This is used to add files to a folder
 bool Folder::AddFile(string filename = "none")
 {
     if (fileQuantity < MAX_FILES)
@@ -83,6 +101,9 @@ bool Folder::AddFile(string filename = "none")
     return false;
 }
 
+/// Move file or folder method for folder
+///
+/// This is used to move filels and folders in a folder
 bool Folder::MoveFileOrFolder(string filename, string newname)
 {
     for (unsigned int i = 0; i < folderQuantity; i++)
@@ -106,6 +127,10 @@ bool Folder::MoveFileOrFolder(string filename, string newname)
     return false;
 }
 
+/// Print List
+///
+/// This will cout (print) all pf the folders and files in a folder.
+/// Folders will have a minus (- ) preceding it's output
 void Folder::PrintList()
 {
     cout << "name" << "\t" << "size" << "\t" << "creation" << endl;
@@ -123,6 +148,11 @@ void Folder::PrintList()
     }
 }
 
+/// Print Recursive helper method
+///
+/// This is a helper method for PrintWorkingDirectory
+/// The function is recursive and is used to work where
+/// the folder is in the file hierarchy
 void Folder::PrintRecursive(Folder *ptr)
 {
     if (ptr == NULL)
@@ -133,11 +163,17 @@ void Folder::PrintRecursive(Folder *ptr)
     cout << ptr->name << "/";
 }
 
+/// Print Working Directory method
+///
+/// Prints where the folder is in the file hierarchy
 void Folder::PrintWorkingDirectory()
 {
     PrintRecursive(this);
 }
 
+/// Print Largest File Info
+///
+/// Prints largest file in folder
 void Folder::PrintLargestFileInfo()
 {
     File largest;
@@ -158,6 +194,10 @@ void Folder::PrintLargestFileInfo()
     }
 }
 
+/// Get Size In MB
+///
+/// This method is used to find filesize of all the files
+/// in a folder
 int Folder::GetSizeInMB()
 {
     int filesize = 0;
@@ -178,6 +218,10 @@ int Folder::GetSizeInMB()
     return filesize;
 }
 
+/// Get Folder methid
+///
+/// This method is used get a pointer to a folder
+/// The folder has to exist in the current folder.
 Folder* Folder::GetFolder(string foldername)
 {
     if  (foldername == "..")
