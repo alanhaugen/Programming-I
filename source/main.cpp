@@ -55,8 +55,8 @@ void Help()
     cout << "Type ls to list files, pwd to print working directory,\n"
             "cd to change directory, touch to make a new file, mkdir\n"
             "to make a new directory. Type help to get this message\n"
-            "again. Type sort to get info on the largest file in folder."
-            "Type mv to change the name of a file or folder."
+            "again. Type sort to get info on the largest file in folder.\n"
+            "Type mv to change the name of a file or folder.\n"
             "Type quit to quit.\n\n";
 }
 
@@ -66,13 +66,12 @@ int main()
     Folder root("/");
     Folder *activeFolder = &root;
 
-    cout << "Alux user interface\n\n";
+    cout << "Alux user interface\n\n"; // Inspired by unix
 
     Help();
 
     bool isAlive = true;
     string input;
-    string option;
 
     while (isAlive)
     {
@@ -119,6 +118,7 @@ int main()
             cout << "Type name of the file or folder you want to move: ";
             cin >> input;
             cout << "Type the new name of the file or folder: ";
+            string option;
             cin >> option;
 
             if (activeFolder->MoveFileOrFolder(input, option) == false)
