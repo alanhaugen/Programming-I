@@ -26,7 +26,7 @@ The diagram also shows the control flow of the program and all the available com
 
 I think I am very good at the basics. I have learnt new things about UML.
 
-I have also used played a bit with flex and bison for making calculators which does PEMDAS correctly. I want to look into recreating the Silicon Graphics program fsn, as seen in Jurrassic Park.
+I have also played a bit with flex and bison for making calculators which does PEMDAS correctly. I want to look into recreating the Silicon Graphics program fsn, as seen in Jurrassic Park.
 
 I feel I need to learn more about UML and try to understand how such diagrams can be useful for programmers.
 
