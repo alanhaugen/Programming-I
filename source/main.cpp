@@ -123,7 +123,7 @@ int main()
 
             if (activeFolder->MoveFileOrFolder(input, option) == false)
             {
-                cout << "Error: Failed to rename file or folder/n";
+                cout << "Error: Failed to rename file or folder\n";
             }
         }
         else if (input == "help")
