@@ -1,0 +1,28 @@
+[<start>start] -> [<input>ls] -> [<choice>isquit] -> [start]
+[<start>start] -> [<input>pwd] -> [<choice>isquit]
+[<start>start] -> [<input>help] -> [<choice>isquit]
+[<start>start] -> [<input>sort] -> [<choice>isquit]
+[<start>start] -> [<input>mkdir] -> [<input>folder name] -> [<choice>isquit]
+[<start>start] -> [<input>cd] -> [<input>folder name] -> [<choice>isquit]
+[<start>start] -> [<input>touch] -> [<input>filename] -> [<choice>isquit]
+[<start>start] -> [<input>mv] -> [<input>source] -> [<input>target] -> [<choice>isquit]
+[<start>start] -> [<input>quit] -> [<choice>isquit]
+[isquit] yes ->[<end>e]
+
+[Folder|
+Max folders = 5
+Max files = 10
+  [Files|+File()]-> [Info|+name :String
+  +sizeInMB: Int
+  +dateOfCreation :String]
+  [Folders|-parentFolder :*Folder
+  -folderQuantity :uInt
+  -filesQuantity :uInt|
+  +Folder(String name)
+  +AddFolder(String name)
+  +GetSizeInMB() :Int
+  +GetFolder(string name) :*Folder
+  +AddFile(String name)]-> [Info]
+]
+
+

@@ -1,0 +1,37 @@
+[Folder|
+  +Max folders = 5
+  +Max files = 10
+  
+  -files :File\[\]
+  -folders :*Folder
+  -parentFolder :*Folder
+  -folderQuantity :uInt
+  -filesQuantity :uInt|
+  +Folder()
+  +~Folder()
+  +Folder(String name)
+  
+  +AddFolder(String name)
+  +AddFile(String name)
+  
+  +MoveFileOrFolder(filename :String, newname :String) :Bool
+  
+  +PrintList()
+  +PrintRecursive(ptr :*Folder);
+  +PrintWorkingDirectory()
+  +PrintLargestFileInfo()
+  
+  +GetSizeInMB() :Int
+  +GetFolder(string name) :*Folder
+]-:>[Info]
+
+[File|+File()
+]-:>[Info]
+
+[Info|
+  +name :String
+  +sizeInMB: Int
+  +dateOfCreation :String
+]
+
+
