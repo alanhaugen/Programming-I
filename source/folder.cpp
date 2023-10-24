@@ -68,7 +68,10 @@ bool Folder::AddFolder(string foldername = "empty")
             tempFolders[i] = folders[i];
         }
 
-        delete[] folders;
+        if (folders != NULL)
+        {
+            delete[] folders;
+        }
 
         folders = tempFolders;
 

@@ -90,12 +90,14 @@ int main()
         {
             cout << "Type name of file: ";
             cin >> input;
+
             activeFolder->AddFile(input);
         }
         else if (input == "mkdir")
         {
             cout << "Type name of folder: ";
             cin >> input;
+
             activeFolder->AddFolder(input);
         }
         else if (input == "cd")
