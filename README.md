@@ -36,3 +36,28 @@ I have used Doxygen to generate pretty documentation (XML).
 
 I have made the documentation available on my website here: [https://alanhaugen.github.io/docs](https://alanhaugen.github.io/docs).
 
+Note the program implements a typical unix file system. The following commands are available:
+
+* **touch** (to create files)
+* **mkdir** (to create directories)
+* **cd** (to change directory)
+* **ls** (to list your files and directories)
+* **mv** (to change the name of a file or directory)
+
+In addition:
+
+* **sort** (to find the biggest file)
+* **quit** (to close the program)
+* **help** (to print instructions on how to use the program)
+
+To create a folder, type:
+
+> mkdir folder
+
+To list it's contents, type:
+
+> cd
+> folder
+> ls
+
+I personally really enjoy the arguments found by googling [``Getters and setters are evil''](https://google.gprivate.com/search.php?search?q=Getters+and+setters+are+evil). I like to use public as often as possible to keep encapsulation and OOP valid in my program and only use setters OR getters (and private variables) when it improves a computer program.
