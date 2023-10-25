@@ -43,6 +43,7 @@ Note the program implements a typical unix file system. The following commands a
 * **cd** (to change directory)
 * **ls** (to list your files and directories)
 * **mv** (to change the name of a file or directory)
+* **pwd** (to print where you are in the file system)
 
 In addition:
 
@@ -52,12 +53,13 @@ In addition:
 
 To create a folder, type:
 
-> mkdir folder
+* mkdir
+* folder
 
-To list it's contents, type:
+To list the contents of the folder named folder, type:
 
-> cd
-> folder
-> ls
+* cd
+* folder
+* ls
 
 I personally really enjoy the arguments found by googling [``Getters and setters are evil''](https://google.gprivate.com/search.php?search?q=Getters+and+setters+are+evil). I like to use public as often as possible to keep encapsulation and OOP valid in my program and only use setters OR getters (and private variables) when it improves a computer program.
