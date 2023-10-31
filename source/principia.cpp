@@ -6,7 +6,8 @@
     return 0;
 }*/
 
-enum yytokentype {
+enum yytokentype
+{
     NUMBER = 258,
     ADD    = 259,
     SUB    = 260,
