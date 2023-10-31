@@ -5,6 +5,7 @@
 
 int main()
 {
+    while(true)
     Principia princ;
 
     return 0;
