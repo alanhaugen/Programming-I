@@ -1,6 +1,7 @@
 #include "file.h"
 
 #include <stdlib.h>
+#include <cstring>
 #include <chrono>
 #include <ctime>
 
