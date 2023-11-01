@@ -64,7 +64,7 @@ void Help()
 int main()
 {
     Folder root("/");
-    Folder *activeFolder = &root;
+    Folder* activeFolder = &root;
 
     cout << "Alux user interface\n\n"; // Inspired by unix
 

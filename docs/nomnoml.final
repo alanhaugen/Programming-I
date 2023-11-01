@@ -25,6 +25,8 @@
   +GetFolder(string name) :*Folder
 ]-:>[Info]
 
+[Folder]o-[File]
+
 [File|+File()
 ]-:>[Info]
 
@@ -33,5 +35,4 @@
   +sizeInMB: Int
   +dateOfCreation :String
 ]
-
 
