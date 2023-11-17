@@ -3,10 +3,24 @@
 #include "inputfunctions.h"
 #include "polynomial.h"
 #include "principia.h"
+#include <vector>
 
-void a()
+unsigned int Factorial(unsigned int n)
+{
+    int result = 1;
+
+    for (unsigned int i = 1; i <= n; i++)
+    {
+        result *= i;
+    }
+
+    return result;
+}
+
+void a1()
 {
     cout << "{ 2n - 1} from n=1 to infinity" << endl;
+    cout << "This sequence is the odd numbers" << endl;
 
     for (int n = 1; n <= 20; n++)
     {
@@ -14,31 +28,201 @@ void a()
     }
 }
 
-void b()
+void b1()
 {
     cout << "{ ((-1)^(n+1)) * (1/n) } from n=1 to infinity" << endl;
 
     for (int n = 1; n <= 20; n++)
     {
-        cout << "n = " << n << ": " << pow(-1, n+1) * (1/n) << endl;
+        cout << "n = " << n << ": " << pow(-1, n+1) * (1/double(n)) << endl;
     }
 }
 
-void c()
+void c1()
 {
     cout << "{ 1/n! } from n=1 to infinity" << endl;
 
     for (int n = 1; n <= 20; n++)
     {
-        cout << "n = " << n << ": " << 1 / Factorial(n) << endl;
+        cout << "n = " << n << ": " << double(1) / Factorial(n) << endl;
+    }
+}
+
+void d1()
+{
+    cout << "{ ((-1)^(n+1)) / (1/n!) } from n=1 to infinity" << endl;
+
+    for (int n = 1; n <= 20; n++)
+    {
+        cout << "n = " << n << ": " << double(1) / Factorial(n) << endl;
+    }
+}
+
+void e1()
+{
+    cout << "{ sinus ((n * pi) / 2) } from n=1 to infinity" << endl;
+
+    for (int n = 1; n <= 20; n++)
+    {
+        cout << "n = " << n << ": " << sin((double(n) * M_PI) / double(2)) << endl;
+    }
+}
+
+void fibonacci()
+{
+    int previousResult1 = 1;
+    int previousResult2 = 1;
+
+    cout << "The fibonacci sequence. This sequence is recursive" << endl;
+    for (int n = 1; n <= 20; n++)
+    {
+        cout << previousResult1 + previousResult2 << endl;
+        int temp = previousResult1 + previousResult2; // temp variable is vital
+        previousResult1 = previousResult2;
+        previousResult2 = temp;
     }
 }
 
 void one()
 {
-    a();
-    b();
-    c();
+    /*
+     * - Oppgave 1
+     *
+     * Lag et program som beregn og skriv ut de 20 første leddene i disse følgene
+     *
+    */
+
+    a1();
+    b1();
+    c1();
+    d1();
+    e1();
+    fibonacci();
+}
+
+void a2()
+{
+    cout << "Sigma from i=1 to 20" << endl;
+
+    double sum = 0;
+
+    for (int i = 1; i <= 20; i++)
+    {
+        cout << "i = " << i << ": " << (i*i - 4) << endl;
+        sum += (i*i - 4);
+    }
+
+    cout << "Sum: " << sum << endl;
+}
+
+void b2()
+{
+    cout << "Sigma from i=0 to 32" << endl;
+
+    double sum = 0;
+
+    for (int i = 0; i <= 32; i++)
+    {
+        cout << "i = " << i << ": " << (sin(i/double(10))) << endl;
+        sum += (sin(i/double(10)));
+    }
+
+    cout << "Sum: " << sum << endl;
+}
+
+void c2()
+{
+    cout << "Sigma from i=0 to 16" << endl;
+
+    double sum = 0;
+
+    for (int i = 0; i <= 16; i++)
+    {
+        cout << "i = " << i << ": " << (sqrt(4*i)) << endl;
+        sum += (sqrt(4*i));
+    }
+
+    cout << "Sum: " << sum << endl;
+}
+
+void two()
+{
+    /*
+     * - Oppgave 2
+     *
+     * Lag et program som skriver ut alle leddene OG summen
+     *
+    */
+
+    a2();
+    b2();
+    c2();
+}
+
+void a3()
+{
+    // Lag en funksjon for sin(x) med input parametre n og x, som returnerer Sn og |En|.
+    int n = 1;
+    int x = 1;
+
+    Principia::Result p = Principia::Sin(n, x);
+
+    cout << "Sn: " << p.Sn << endl;
+    cout << "En: " << p.En << endl;
+}
+
+void b3()
+{
+    // Lag en funksjon for cos(x) med input parametre n og x, som returnerer Sn og |En|.
+    int n = 1;
+    int x = 1;
+
+    Principia::Result p = Principia::Cos(n, x);
+
+    cout << "Sn: " << p.Sn << endl;
+    cout << "En: " << p.En << endl;
+}
+
+void c3()
+{
+    // Lag en funksjon for e^x med input parametre n og x, som returnerer Sn og |En|.
+    int n = 1;
+    int x = 1;
+
+    Principia::Result p = Principia::E(n, x);
+
+    cout << "Sn: " << p.Sn << endl;
+    cout << "En: " << p.En << endl;
+}
+
+void d3()
+{
+    // Lag en funksjon som beregner sin(x) + cos(x) med input parametre n og x,
+    // som returnerer Sn og |En|.
+    int n = 1;
+    int x = 1;
+
+    /*Principia::Result p = Principia::Sin(n, x) + Principia::Cos(n, x);
+
+    cout << "Sn: " << p.Sn << endl;
+    cout << "En: " << p.En << endl;*/
+}
+
+void three()
+{
+    /*
+     * - Oppgave 3
+     *
+     * Du skal programmere kjente funksjoner ved å bruke potensrekka for
+     * disse funksjonene, med sentrum i 0, dvs. a=0. Da kalles det
+     * Maclaurin rekka for de aktuelle funksjonene, disse står på side 351 i boka.
+     *
+    */
+
+    a3();
+    b3();
+    c3();
+    d3();
 }
 
 int main()
@@ -50,13 +234,11 @@ int main()
      *
      * Du trenger ikke ta oppgavene i rekkefølge, men de to første er nok de enkleste.
      *
-     * - Oppgave 1
-     *
-     * Lag et program som beregn og skriv ut de 20 første leddene i disse følgene
-     *
     */
 
     one();
+    two();
+    three();
 
     //while(true)
     //Principia princ;

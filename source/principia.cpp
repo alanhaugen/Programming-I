@@ -19,6 +19,33 @@ enum yytokentype
 
 extern int yylval;
 
+Principia::Result Principia::Sin(int n, int x)
+{
+    Result a;
+    a.En = n;
+    a.Sn = x;
+
+    return a;
+}
+
+Principia::Result Principia::Cos(int n, int x)
+{
+    Result a;
+    a.En = n;
+    a.Sn = x;
+
+    return a;
+}
+
+Principia::Result Principia::E(int n, int x)
+{
+    Result a;
+    a.En = n;
+    a.Sn = x;
+
+    return a;
+}
+
 Principia::Principia()
 {
     sum = 0;
