@@ -5,18 +5,6 @@
 #include "principia.h"
 #include <vector>
 
-unsigned int Factorial(unsigned int n)
-{
-    int result = 1;
-
-    for (unsigned int i = 1; i <= n; i++)
-    {
-        result *= i;
-    }
-
-    return result;
-}
-
 void a1()
 {
     cout << "{ 2n - 1} from n=1 to infinity" << endl;
@@ -102,7 +90,7 @@ void one()
 
 void a2()
 {
-    cout << "Sigma from i=1 to 20" << endl;
+    cout << "{(i*i - 4)} from i=1 to 20" << endl;
 
     double sum = 0;
 
@@ -117,7 +105,7 @@ void a2()
 
 void b2()
 {
-    cout << "Sigma from i=0 to 32" << endl;
+    cout << "{sin(i/10)} from i=0 to 32" << endl;
 
     double sum = 0;
 
@@ -132,7 +120,7 @@ void b2()
 
 void c2()
 {
-    cout << "Sigma from i=0 to 16" << endl;
+    cout << "{sqrt(4*i)} from i=0 to 16" << endl;
 
     double sum = 0;
 
@@ -162,8 +150,8 @@ void two()
 void a3()
 {
     // Lag en funksjon for sin(x) med input parametre n og x, som returnerer Sn og |En|.
-    int n = 1;
-    int x = 1;
+    int n = 7;
+    double x = M_PI / 4;
 
     Principia::Result p = Principia::Sin(n, x);
 
@@ -174,8 +162,8 @@ void a3()
 void b3()
 {
     // Lag en funksjon for cos(x) med input parametre n og x, som returnerer Sn og |En|.
-    int n = 1;
-    int x = 1;
+    int n = 7;
+    double x = M_PI / 4;
 
     Principia::Result p = Principia::Cos(n, x);
 
@@ -187,7 +175,7 @@ void c3()
 {
     // Lag en funksjon for e^x med input parametre n og x, som returnerer Sn og |En|.
     int n = 1;
-    int x = 1;
+    double x = 1.0;
 
     Principia::Result p = Principia::E(n, x);
 
@@ -199,13 +187,12 @@ void d3()
 {
     // Lag en funksjon som beregner sin(x) + cos(x) med input parametre n og x,
     // som returnerer Sn og |En|.
-    int n = 1;
-    int x = 1;
+}
 
-    /*Principia::Result p = Principia::Sin(n, x) + Principia::Cos(n, x);
-
-    cout << "Sn: " << p.Sn << endl;
-    cout << "En: " << p.En << endl;*/
+void e3()
+{
+    // Lag en funksjon som beregner sin(x) + cos(x) med input parametre n og x,
+    // som returnerer Sn og |En|.
 }
 
 void three()
@@ -221,8 +208,9 @@ void three()
 
     a3();
     b3();
-    c3();
-    d3();
+    //c3();
+    //d3();
+    //e3();
 }
 
 int main()
@@ -236,8 +224,8 @@ int main()
      *
     */
 
-    one();
-    two();
+    //one();
+    //two();
     three();
 
     //while(true)

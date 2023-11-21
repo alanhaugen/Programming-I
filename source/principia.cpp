@@ -1,3 +1,5 @@
+#include <math.h>
+#include <iostream>
 #include "principia.h"
 #include "calc.h"
 
@@ -19,25 +21,53 @@ enum yytokentype
 
 extern int yylval;
 
-Principia::Result Principia::Sin(int n, int x)
+unsigned int Factorial(unsigned int n)
+{
+    int result = 1;
+
+    for (unsigned int i = 1; i <= n; i++)
+    {
+        result *= i;
+    }
+
+    return result;
+}
+
+Principia::Result Principia::Sin(int n, double x)
 {
     Result a;
-    a.En = n;
-    a.Sn = x;
+
+    for (int i = 0; i < n; i++)
+    {
+        double fortegn = pow(-1, i);
+        double nevner  = Factorial((2 * i) + 1);
+        double xn  = pow(x, (2 * i) + 1);
+        a.Sn += (fortegn / nevner) * xn;
+    }
+
+    a.En = 0;
 
     return a;
 }
 
-Principia::Result Principia::Cos(int n, int x)
+Principia::Result Principia::Cos(int n, double x)
 {
     Result a;
+
+    for (int i = 0; i < n; i++)
+    {
+        double fortegn = pow(-1, i);
+        double nevner  = Factorial(2 * i);
+        double xn  = pow(x, 2 * i);
+        a.Sn += (fortegn / nevner) * xn;
+    }
+
     a.En = n;
-    a.Sn = x;
 
     return a;
 }
 
-Principia::Result Principia::E(int n, int x)
+Principia::Result Principia::E(int n, double x)
 {
     Result a;
     a.En = n;

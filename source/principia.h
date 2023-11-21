@@ -3,6 +3,8 @@
 
 #include <string>
 
+unsigned int Factorial(unsigned int n);
+
 class Principia
 {
 private:
@@ -11,13 +13,19 @@ private:
 public:
     struct Result
     {
-        int Sn;
-        int En;
+        double Sn;
+        double En;
+        Result()
+        {
+            Sn = 0;
+            En = 0;
+        }
     };
 
-    static Result Sin(int n, int x);
-    static Result Cos(int n, int x);
-    static Result E(int n, int x);
+    static Result Sin(int n, double x);
+    static Result Cos(int n, double x);
+    static Result E(int n, double x);
+
     Principia();
 };
 
