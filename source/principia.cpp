@@ -76,7 +76,7 @@ Principia::Result Principia::E(int n, double x)
     return a;
 }
 
-Principia::Principia()
+void Principia::Parse(std::string sentence = "")
 {
     sum = 0;
 
@@ -87,6 +87,12 @@ Principia::Principia()
 
     // Take string and tokenize it
     int tok;
+
+    // TODO: FIXME!
+    if (sentence != "")
+    {
+        return;
+    }
 
     bool isAlive = true;
 
@@ -156,4 +162,14 @@ Principia::Principia()
     printf("%i\n", sum);
 
     // flex and yacc galore
+}
+
+Principia::Principia()
+{
+    Parse();
+}
+
+Principia::Principia(std::string sentence)
+{
+    Parse(sentence);
 }

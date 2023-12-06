@@ -7,7 +7,7 @@
 
 void a1()
 {
-    cout << "{ 2n - 1} from n=1 to infinity" << endl;
+    cout << "{ 2n - 1 } from n=1 to infinity" << endl;
     cout << "This sequence is the odd numbers" << endl;
 
     for (int n = 1; n <= 20; n++)
@@ -187,6 +187,14 @@ void d3()
 {
     // Lag en funksjon som beregner sin(x) + cos(x) med input parametre n og x,
     // som returnerer Sn og |En|.
+    int n = 7;
+    double x = M_PI / 4;
+
+    Principia p = Principia("sin " + to_string(n) + "," + to_string(x))
+                + Principia("cos " + to_string(n) + "," + to_string(x));
+
+    cout << "Sn: " << p.Sn << endl;
+    cout << "En: " << p.En << endl;
 }
 
 void e3()
@@ -206,10 +214,10 @@ void three()
      *
     */
 
-    a3();
-    b3();
+    //a3();
+    //b3();
     //c3();
-    //d3();
+    d3();
     //e3();
 }
 
