@@ -90,13 +90,19 @@ void Principia::Parse(std::string sentence = "")
     // Take string and tokenize it
     int tok;
 
+    // Store string buffer for string input
+    YY_BUFFER_STATE buffer;
+    bool isStringInput = false;
+
     if (sentence.empty() == false)
     {
         sentence += "\n\0\0"; // Lex wants strings to end with double null characters
-        YY_BUFFER_STATE bs = yy_scan_buffer(const_cast<char *>(sentence.c_str()),
-                                            sizeof(sentence));
-        yy_switch_to_buffer(bs);
+
+        buffer = yy_scan_string(const_cast<char *>(sentence.c_str()));
+        isStringInput = true;
     }
+
+
 
     bool isAlive = true;
 
@@ -175,6 +181,11 @@ void Principia::Parse(std::string sentence = "")
     }
 
     printf("%i\n", sum);
+
+    if (isStringInput)
+    {
+        yy_delete_buffer(buffer);
+    }
 
     // flex and yacc galore
 }
