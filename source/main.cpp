@@ -234,7 +234,17 @@ int main()
 
     //one();
     //two();
+
     three();
+
+    /*int n = 7;
+    double x = M_PI / 4;
+
+    Principia p = Principia("sin " + to_string(n) + "," + to_string(x))
+                + Principia("cos " + to_string(n) + "," + to_string(x));
+
+    cout << "Sn: " << p.Sn << endl;
+    cout << "En: " << p.En << endl;*/
 
     //while(true)
     //Principia princ;

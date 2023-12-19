@@ -29,6 +29,11 @@ app: $(OBJS)
 %.tab.cpp: %.y
 	$(BISON) -o $*.tab.cpp -d $<
 
+#Flex can generate a header file with prototypes for you:
+#Code:
+#flex  --header-file=lex.h ex1.
+#This will produce `lex.h' file. You can include it and use `yy_switch_to_buffer()' etc. in bison file.
+
 %.cpp: %.lex 
 	$(FLEX) --header-file=$*.h -o $*.cpp $*.lex
 

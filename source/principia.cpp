@@ -90,13 +90,12 @@ void Principia::Parse(std::string sentence = "")
     // Take string and tokenize it
     int tok;
 
-    // TODO: FIXME!
-    if (sentence != "")
+    if (sentence.empty() == false)
     {
-        printf("input: %s\n", sentence.c_str());
-
-        //sentence += '\0';
-        //yy_scan_buffer(const_cast<char *>(sentence.c_str()), sentence.size());
+        sentence += "\n\0\0"; // Lex wants strings to end with double null characters
+        YY_BUFFER_STATE bs = yy_scan_buffer(const_cast<char *>(sentence.c_str()),
+                                            sizeof(sentence));
+        yy_switch_to_buffer(bs);
     }
 
     bool isAlive = true;
