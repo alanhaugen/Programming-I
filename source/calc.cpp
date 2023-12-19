@@ -364,8 +364,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 10
-#define YY_END_OF_BUFFER 11
+#define YY_NUM_RULES 13
+#define YY_END_OF_BUFFER 14
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -373,10 +373,11 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[15] =
+static yyconst flex_int16_t yy_accept[22] =
     {   0,
-        0,    0,   11,    9,    8,    7,    3,    1,    2,    4,
-        6,    5,    6,    0
+        0,    0,   14,   12,   11,   10,    3,    1,    8,    2,
+        4,    9,   12,   12,    5,    9,    0,    0,    7,    6,
+        0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -385,16 +386,16 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    4,    5,    1,    6,    1,    7,    8,    8,    8,
-        8,    8,    8,    8,    8,    8,    8,    1,    1,    1,
+        1,    4,    5,    6,    7,    1,    8,    9,    9,    9,
+        9,    9,    9,    9,    9,    9,    9,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,   10,    1,
 
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    9,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,   11,    1,    1,    1,    1,   12,
+       13,    1,    1,    1,   14,    1,    1,    1,    1,    1,
+        1,    1,    1,   15,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -411,35 +412,40 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int32_t yy_meta[10] =
+static yyconst flex_int32_t yy_meta[16] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int16_t yy_base[15] =
+static yyconst flex_int16_t yy_base[22] =
     {   0,
-        0,    0,   12,   13,   13,   13,   13,   13,   13,   13,
-        3,   13,    2,   13
+        0,    0,   22,   23,   23,   23,   23,   23,   23,   23,
+       23,   12,    7,    8,   23,    9,    3,    4,   23,   23,
+       23
     } ;
 
-static yyconst flex_int16_t yy_def[15] =
+static yyconst flex_int16_t yy_def[22] =
     {   0,
-       14,    1,   14,   14,   14,   14,   14,   14,   14,   14,
-       14,   14,   14,    0
+       21,    1,   21,   21,   21,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21,   21,   21,   21,   21,
+        0
     } ;
 
-static yyconst flex_int16_t yy_nxt[23] =
+static yyconst flex_int16_t yy_nxt[39] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
-       13,   14,    3,   14,   14,   14,   14,   14,   14,   14,
-       14,   14
+        4,    4,    4,   14,   15,   20,   19,   16,   18,   17,
+       16,   21,    3,   21,   21,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21,   21,   21
     } ;
 
-static yyconst flex_int16_t yy_chk[23] =
+static yyconst flex_int16_t yy_chk[39] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,   13,
-       11,    3,   14,   14,   14,   14,   14,   14,   14,   14,
-       14,   14
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,   18,   17,   16,   14,   13,
+       12,    3,   21,   21,   21,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21,   21,   21
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -466,11 +472,14 @@ char *yytext;
         MUL    = 261,
         DIV    = 262,
         ABS    = 263,
-        EOL    = 264
+        SIN    = 264,
+        COS    = 265,
+        COMMA  = 266,
+        EOL    = 267
     };
 
     int yylval;
-#line 474 "source/calc.cpp"
+#line 483 "source/calc.cpp"
 
 #define INITIAL 0
 
@@ -652,10 +661,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 19 "source/calc.lex"
+#line 22 "source/calc.lex"
 
 
-#line 659 "source/calc.cpp"
+#line 668 "source/calc.cpp"
 
 	if ( !(yy_init) )
 		{
@@ -708,13 +717,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 15 )
+				if ( yy_current_state >= 22 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 13 );
+		while ( yy_base[yy_current_state] != 23 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -740,56 +749,71 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 21 "source/calc.lex"
+#line 24 "source/calc.lex"
 { return ADD; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "source/calc.lex"
+#line 25 "source/calc.lex"
 { return SUB; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 23 "source/calc.lex"
+#line 26 "source/calc.lex"
 { return MUL; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 24 "source/calc.lex"
+#line 27 "source/calc.lex"
 { return DIV; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 25 "source/calc.lex"
+#line 28 "source/calc.lex"
 { return ABS; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 26 "source/calc.lex"
-{ yylval = atoi(yytext); return NUMBER; }
+#line 29 "source/calc.lex"
+{ return SIN; }
 	YY_BREAK
 case 7:
-/* rule 7 can match eol */
 YY_RULE_SETUP
-#line 27 "source/calc.lex"
-{ return EOL; }
+#line 30 "source/calc.lex"
+{ return COS; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 28 "source/calc.lex"
-{ /* ignore whitespace */ }
+#line 31 "source/calc.lex"
+{ return COMMA; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 29 "source/calc.lex"
-{ printf("Mystery character %s\n", yytext); }
+#line 32 "source/calc.lex"
+{ yylval = atoi(yytext); return NUMBER; }
 	YY_BREAK
 case 10:
+/* rule 10 can match eol */
 YY_RULE_SETUP
-#line 31 "source/calc.lex"
+#line 33 "source/calc.lex"
+{ return EOL; }
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 34 "source/calc.lex"
+{ /* ignore whitespace */ }
+	YY_BREAK
+case 12:
+YY_RULE_SETUP
+#line 35 "source/calc.lex"
+{ printf("Mystery character %s\n", yytext); }
+	YY_BREAK
+case 13:
+YY_RULE_SETUP
+#line 37 "source/calc.lex"
 ECHO;
 	YY_BREAK
-#line 793 "source/calc.cpp"
+#line 817 "source/calc.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1081,7 +1105,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 15 )
+			if ( yy_current_state >= 22 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1109,11 +1133,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 15 )
+		if ( yy_current_state >= 22 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 14);
+	yy_is_jam = (yy_current_state == 21);
 
 	return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1786,7 +1810,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 31 "source/calc.lex"
+#line 37 "source/calc.lex"
 
 
 

@@ -8,15 +8,17 @@
     return 0;
 }*/
 
-enum yytokentype
-{
+enum yytokentype {
     NUMBER = 258,
     ADD    = 259,
     SUB    = 260,
     MUL    = 261,
     DIV    = 262,
     ABS    = 263,
-    EOL    = 264
+    SIN    = 264,
+    COS    = 265,
+    COMMA  = 266,
+    EOL    = 267
 };
 
 extern int yylval;
@@ -91,7 +93,10 @@ void Principia::Parse(std::string sentence = "")
     // TODO: FIXME!
     if (sentence != "")
     {
-        return;
+        printf("input: %s\n", sentence.c_str());
+
+        //sentence += '\0';
+        //yy_scan_buffer(const_cast<char *>(sentence.c_str()), sentence.size());
     }
 
     bool isAlive = true;
@@ -149,6 +154,16 @@ void Principia::Parse(std::string sentence = "")
             isSub = false;
             isDiv = false;
             isMul = true;
+            break;
+
+        case SIN:
+            printf("sin\n");
+            break;
+        case COS:
+            printf("cos\n");
+            break;
+        case COMMA:
+            printf("comma\n");
             break;
 
         case EOL:
