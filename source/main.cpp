@@ -238,7 +238,7 @@ int main()
     three();
 
     //while(true)
-    //Principia princ;
+    //Principia();
 
     return 0;
 }
