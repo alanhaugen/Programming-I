@@ -168,6 +168,7 @@ void Principia::Parse(std::string sentence = "")
 
         case EOL:
             isAlive = false;
+            break;
 
         default:
             printf("\n");
