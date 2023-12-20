@@ -18,7 +18,7 @@ enum yytokentype {
     EOL    = 267
 };
 
-extern int yylval;
+extern double yylval;
 
 class Principia
 {

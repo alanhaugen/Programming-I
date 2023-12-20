@@ -480,7 +480,7 @@ char *yytext;
         EOL    = 267
     };
 
-    int yylval;
+    double yylval;
 #line 485 "source/calc.cpp"
 
 #define INITIAL 0
@@ -792,7 +792,7 @@ YY_RULE_SETUP
 case 9:
 YY_RULE_SETUP
 #line 32 "source/calc.lex"
-{ yylval = atoi(yytext); return NUMBER; }
+{ yylval = atof(yytext); return NUMBER; }
 	YY_BREAK
 case 10:
 /* rule 10 can match eol */

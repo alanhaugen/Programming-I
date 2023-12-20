@@ -237,7 +237,7 @@ int main()
 
     //three();
 
-    Principia("sin 1 1");
+    Principia("sin 1.100");
 
     //while(true)
     //Principia();

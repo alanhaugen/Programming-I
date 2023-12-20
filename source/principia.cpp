@@ -87,8 +87,6 @@ void Principia::Parse(std::string sentence = "")
         isStringInput = true;
     }
 
-
-
     bool isAlive = true;
 
     while (isAlive)
