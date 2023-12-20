@@ -5,15 +5,19 @@
 %{
     enum yytokentype {
         NUMBER = 258,
-        ADD    = 259,
-        SUB    = 260,
-        MUL    = 261,
-        DIV    = 262,
-        ABS    = 263,
-        SIN    = 264,
-        COS    = 265,
-        COMMA  = 266,
-        EOL    = 267
+        ADD,
+        SUB,
+        MUL,
+        DIV,
+        ABS,
+        SIN,
+        COS,
+        COMMA,
+        PI,
+        LEFT_PAR,
+        RIGHT_PAR,
+        PARAMETER,
+        EOL
     };
 
     double yylval;
@@ -27,8 +31,14 @@
 "/" { return DIV; }
 "|" { return ABS; }
 "sin" { return SIN; }
+"sinus" { return SIN; }
 "cos" { return COS; }
+"cosinus" { return COS; }
 "," { return COMMA; }
+"(" { return LEFT_PAR; }
+")" { return RIGHT_PAR; }
+"pi" { return PI; }
+"n=" { return PARAMETER; }
 [0-9]+(\.[0-9]+)? { yylval = atof(yytext); return NUMBER; }
 \n { return EOL; }
 [ \t] { /* ignore whitespace */ }

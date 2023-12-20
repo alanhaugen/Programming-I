@@ -72,6 +72,10 @@ void Principia::Parse(std::string sentence = "")
     bool isDiv = false;
     bool isMul = false;
 
+    // Parameter mode
+    bool isParam = false;
+    float param = 0.0f;
+
     // Take string and tokenize it
     int tok;
 
@@ -98,21 +102,29 @@ void Principia::Parse(std::string sentence = "")
         switch(tok)
         {
         case NUMBER:
-            if (isAdd)
+            if (isParam == false)
             {
-                sum += yylval;
+                if (isAdd)
+                {
+                    sum += yylval;
+                }
+                else if (isSub)
+                {
+                    sum -= yylval;
+                }
+                else if (isDiv)
+                {
+                    sum /= yylval;
+                }
+                else if (isMul)
+                {
+                    sum *= yylval;
+                }
             }
-            else if (isSub)
+            else
             {
-                sum -= yylval;
-            }
-            else if (isDiv)
-            {
-                sum /= yylval;
-            }
-            else if (isMul)
-            {
-                sum *= yylval;
+                param = yylval;
+                printf("n=%f\n", param);
             }
             break;
 
@@ -153,6 +165,21 @@ void Principia::Parse(std::string sentence = "")
         case COMMA:
             printf("comma\n");
             break;
+        case PI:
+            sum += 3.14156f;
+            break;
+
+        case LEFT_PAR:
+            printf("Left parenthesis\n");
+            break;
+        case RIGHT_PAR:
+            printf("Right parenthesis\n");
+            break;
+
+        case PARAMETER:
+            isParam = true;
+            printf("Parameter\n");
+            break;
 
         case EOL:
             isAlive = false;
@@ -163,12 +190,17 @@ void Principia::Parse(std::string sentence = "")
         }
     }
 
-    printf("%f\n", sum);
-
     if (isStringInput)
     {
         yy_delete_buffer(buffer);
     }
+
+    printf("x=%f\n", sum);
+
+    Result a = Sin(param, sum);
+
+    printf("\nSn = %f\n", a.Sn);
+    printf("En = %f\n", a.En);
 
     // flex and yacc galore
 }
