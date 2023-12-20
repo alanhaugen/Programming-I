@@ -5,6 +5,7 @@ CppApplication {
     files: [
         "source/calc.cpp",
         "source/calc.lex",
+        "source/calc.yacc",
         "source/inputfunctions.cpp",
         "source/inputfunctions.h",
         "source/main.cpp",

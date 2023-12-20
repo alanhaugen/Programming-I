@@ -18,7 +18,7 @@ GENERATED_SOURCES = $(PARSERS:.y=.tab.cpp) $(SCANNERS:.lex=.cpp)
 SOURCES += $(GENERATED_SOURCES)
 OBJS = $(SOURCES:.cpp=.o)
 
-source/principia.cpp: source/calc.o
+source/principia.cpp: source/calc.o #source/calc.tab.o
 
 app: $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) -o app
@@ -26,7 +26,7 @@ app: $(OBJS)
 %o: %cpp
 	$(CC) $(CFLAGS) -c $*cpp -o $@
 
-%.tab.cpp: %.y
+%.tab.cpp: %.yacc
 	$(BISON) -o $*.tab.cpp -d $<
 
 #Flex can generate a header file with prototypes for you:
