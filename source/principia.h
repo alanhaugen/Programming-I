@@ -5,10 +5,25 @@
 
 unsigned int Factorial(unsigned int n);
 
+enum yytokentype {
+    NUMBER = 258,
+    ADD    = 259,
+    SUB    = 260,
+    MUL    = 261,
+    DIV    = 262,
+    ABS    = 263,
+    SIN    = 264,
+    COS    = 265,
+    COMMA  = 266,
+    EOL    = 267
+};
+
+extern int yylval;
+
 class Principia
 {
 private:
-    int sum;
+    double sum;
     void Parse(std::string sentence);
 
 public:

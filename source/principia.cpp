@@ -8,21 +8,6 @@
     return 0;
 }*/
 
-enum yytokentype {
-    NUMBER = 258,
-    ADD    = 259,
-    SUB    = 260,
-    MUL    = 261,
-    DIV    = 262,
-    ABS    = 263,
-    SIN    = 264,
-    COS    = 265,
-    COMMA  = 266,
-    EOL    = 267
-};
-
-extern int yylval;
-
 unsigned int Factorial(unsigned int n)
 {
     int result = 1;
@@ -80,7 +65,7 @@ Principia::Result Principia::E(int n, double x)
 
 void Principia::Parse(std::string sentence = "")
 {
-    sum = 0;
+    sum = 0.0f;
 
     bool isAdd = true;
     bool isSub = false;
@@ -180,7 +165,7 @@ void Principia::Parse(std::string sentence = "")
         }
     }
 
-    printf("%i\n", sum);
+    printf("%f\n", sum);
 
     if (isStringInput)
     {

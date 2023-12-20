@@ -29,7 +29,7 @@
 "sin" { return SIN; }
 "cos" { return COS; }
 "," { return COMMA; }
-[0-9]+ { yylval = atoi(yytext); return NUMBER; }
+[0-9]+(\.[0-9]+)? { yylval = atoi(yytext); return NUMBER; }
 \n { return EOL; }
 [ \t] { /* ignore whitespace */ }
 . { printf("Mystery character %s\n", yytext); }

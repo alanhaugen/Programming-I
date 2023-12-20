@@ -1,6 +1,8 @@
 /* simplest version of calculator */ %{
 #include <stdio.h>
 %}
+%define api.value.type {double}
+
 /* declare tokens */ %token NUMBER
 %token ADD SUB MUL DIV ABS %token EOL
 %%

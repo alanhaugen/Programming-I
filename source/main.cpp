@@ -235,7 +235,9 @@ int main()
     //one();
     //two();
 
-    three();
+    //three();
+
+    Principia("sin 1 1");
 
     //while(true)
     //Principia();
