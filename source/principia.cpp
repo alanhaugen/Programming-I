@@ -188,6 +188,10 @@ void Principia::Parse(std::string sentence = "")
             //printf("Parameter\n");
             break;
 
+        case E_POW:
+            printf("E to the power of\n");
+            break;
+
         case EOL:
             isAlive = false;
             break;

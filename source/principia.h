@@ -19,6 +19,7 @@ enum yytokentype {
     LEFT_PAR,
     RIGHT_PAR,
     PARAMETER,
+    E_POW,
     EOL
 };
 

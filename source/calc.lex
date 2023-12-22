@@ -17,6 +17,7 @@
         LEFT_PAR,
         RIGHT_PAR,
         PARAMETER,
+        E_POW,
         EOL
     };
 
@@ -40,6 +41,8 @@
 "pi" { return PI; }
 "n=" { return PARAMETER; }
 [0-9]+(\.[0-9]+)? { yylval = atof(yytext); return NUMBER; }
+e^ { return E_POW; }
+E^ { return E_POW; }
 \n { return EOL; }
 [ \t] { /* ignore whitespace */ }
 . { printf("Mystery character %s\n", yytext); }
