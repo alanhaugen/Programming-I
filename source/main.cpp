@@ -159,51 +159,26 @@ void two()
 void a3()
 {
     // Lag en funksjon for sin(x) med input parametre n og x, som returnerer Sn og |En|.
-    int n = 7;
-    double x = M_PI / 4;
-
-    Principia::Result p = Principia::Sin(n, x);
-
-    cout << "Sn: " << p.Sn << endl;
-    cout << "En: " << p.En << endl;
+    Principia("sin(pi/4), n=7");
 }
 
 void b3()
 {
     // Lag en funksjon for cos(x) med input parametre n og x, som returnerer Sn og |En|.
-    int n = 7;
-    double x = M_PI / 4;
-
-    Principia::Result p = Principia::Cos(n, x);
-
-    cout << "Sn: " << p.Sn << endl;
-    cout << "En: " << p.En << endl;
+    Principia("cos(pi/4), n=7");
 }
 
 void c3()
 {
     // Lag en funksjon for e^x med input parametre n og x, som returnerer Sn og |En|.
-    int n = 1;
-    double x = 1.0;
-
-    Principia::Result p = Principia::E(n, x);
-
-    cout << "Sn: " << p.Sn << endl;
-    cout << "En: " << p.En << endl;
+    Principia("e^(1.0), n=1");
 }
 
 void d3()
 {
     // Lag en funksjon som beregner sin(x) + cos(x) med input parametre n og x,
     // som returnerer Sn og |En|.
-    int n = 7;
-    double x = M_PI / 4;
-
-    Principia p = Principia("sin " + to_string(n) + "," + to_string(x))
-                + Principia("cos " + to_string(n) + "," + to_string(x));
-
-    cout << "Sn: " << p.Sn << endl;
-    cout << "En: " << p.En << endl;
+    Principia("sin(pi/4) + cos(pi/4), n=7");
 }
 
 void e3()
@@ -223,11 +198,11 @@ void three()
      *
     */
 
-    //a3();
-    //b3();
-    //c3();
+    a3();
+    b3();
+    c3();
     d3();
-    //e3();
+    e3();
 }
 
 int main()
@@ -244,9 +219,7 @@ int main()
     //one();
     //two();
 
-    //three();
-
-    Principia("sin(pi/4), n=7");
+    three();
 
     //while(true)
     //Principia();

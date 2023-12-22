@@ -78,6 +78,10 @@ void Principia::Parse(std::string sentence = "")
     bool isParam = false;
     float param = 0.0f;
 
+    // States for sin and cos
+    bool isSin = false;
+    bool isCos = false;
+
     // Take string and tokenize it
     int tok;
 
@@ -87,6 +91,7 @@ void Principia::Parse(std::string sentence = "")
 
     if (sentence.empty() == false)
     {
+        printf("%s\n", sentence.c_str()); // Output input string
         sentence += "\n\0\0"; // Lex wants strings to end with double null characters
 
         buffer = yy_scan_string(const_cast<char *>(sentence.c_str()));
@@ -159,28 +164,28 @@ void Principia::Parse(std::string sentence = "")
             break;
 
         case SIN:
-            printf("sin\n");
+            isSin = true;
             break;
         case COS:
-            printf("cos\n");
+            isCos = true;
             break;
         case COMMA:
-            printf("comma\n");
+            //printf("comma\n");
             break;
         case PI:
             sum += 3.14156f;
             break;
 
         case LEFT_PAR:
-            printf("Left parenthesis\n");
+            //printf("Left parenthesis\n");
             break;
         case RIGHT_PAR:
-            printf("Right parenthesis\n");
+            //printf("Right parenthesis\n");
             break;
 
         case PARAMETER:
             isParam = true;
-            printf("Parameter\n");
+            //printf("Parameter\n");
             break;
 
         case EOL:
@@ -199,12 +204,27 @@ void Principia::Parse(std::string sentence = "")
 
     printf("x=%f\n", sum);
 
-    Result a = Sin(param, sum);
+    if (isSin && isCos)
+    {
+        /*Result a = Sin(param, sum) + Cos(param,sum);
 
-    printf("\nSn = %f\n", a.Sn);
-    printf("En = %f\n", a.En);
+        printf("\nSn = %f\n", a.Sn);
+        printf("En = %f\n\n", a.En);*/
+    }
+    else if (isSin)
+    {
+        Result a = Sin(param, sum);
 
-    // flex and yacc galore
+        printf("\nSn = %f\n", a.Sn);
+        printf("En = %f\n\n", a.En);
+    }
+    else if (isCos)
+    {
+        Result a = Cos(param, sum);
+
+        printf("\nSn = %f\n", a.Sn);
+        printf("En = %f\n\n", a.En);
+    }
 }
 
 Principia::Principia()
