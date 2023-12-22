@@ -32,7 +32,8 @@ Principia::Result Principia::Sin(int n, double x)
         a.Sn += (fortegn / nevner) * xn;
     }
 
-    a.En = 0;
+    a.En = pow(x, 2 * (n + 1) + 1) / Factorial(2 * (n+1)+1);
+    if (a.En < 0.) a.En = -a.En;
 
     return a;
 }
@@ -49,7 +50,8 @@ Principia::Result Principia::Cos(int n, double x)
         a.Sn += (fortegn / nevner) * xn;
     }
 
-    a.En = n;
+    a.En = pow(x, 2 * (n + 1) + 1) / Factorial(2 * (n+1)+1);
+    if (a.En < 0.) a.En = -a.En;
 
     return a;
 }

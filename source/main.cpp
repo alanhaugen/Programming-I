@@ -3,7 +3,6 @@
 #include "inputfunctions.h"
 #include "polynomial.h"
 #include "principia.h"
-#include <vector>
 
 void a1()
 {
