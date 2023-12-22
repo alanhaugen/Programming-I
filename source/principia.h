@@ -41,6 +41,14 @@ public:
             Sn = 0;
             En = 0;
         }
+
+        Result operator+(Result const& obj)
+        {
+            Sn += obj.Sn;
+            En += obj.En;
+
+            return *this;
+        }
     };
 
     Principia();
@@ -48,11 +56,6 @@ public:
 
     double Sn;
     double En;
-
-    Principia operator+(Principia const& obj)
-    {
-        return obj;
-    }
 
     static Result Sin(int n, double x);
     static Result Cos(int n, double x);

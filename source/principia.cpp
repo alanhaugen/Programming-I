@@ -206,10 +206,10 @@ void Principia::Parse(std::string sentence = "")
 
     if (isSin && isCos)
     {
-        /*Result a = Sin(param, sum) + Cos(param,sum);
+        Result a = Sin(param, sum) + Cos(param,sum);
 
         printf("\nSn = %f\n", a.Sn);
-        printf("En = %f\n\n", a.En);*/
+        printf("En = %f\n\n", a.En);
     }
     else if (isSin)
     {
