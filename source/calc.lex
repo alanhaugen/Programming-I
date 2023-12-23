@@ -12,7 +12,6 @@
         ABS,
         SIN,
         COS,
-        COMMA,
         PI,
         LEFT_PAR,
         RIGHT_PAR,
@@ -39,7 +38,6 @@
 "sinus" { return SIN; }
 "cos" { return COS; }
 "cosinus" { return COS; }
-"," { return COMMA; }
 "(" { return LEFT_PAR; }
 ")" { return RIGHT_PAR; }
 "{" { return LEFT_CURL; }
@@ -54,6 +52,7 @@ E^ { return E_POW; }
 \n { return EOL; }
 from { return IGNORE; }
 to { return IGNORE; }
+"," { return IGNORE; }
 infinity { yylval = 20.0f; return NUMBER; }
 [ \t] { /* ignore whitespace */ }
 . { printf("Mystery character %s\n", yytext); }

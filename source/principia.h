@@ -15,7 +15,6 @@ enum yytokentype {
     ABS,
     SIN,
     COS,
-    COMMA,
     PI,
     LEFT_PAR,
     RIGHT_PAR,
@@ -33,7 +32,6 @@ extern double yylval;
 class Principia
 {
 private:
-    double sum;
     void Parse(std::string sentence);
 
 public:
@@ -89,7 +87,7 @@ public:
         {
         }
 
-        int Compute(long int variable)
+        double Compute(long int variable = 1)
         {
             double sum = 0.0f;
             currentOperation = ADDITION;
@@ -106,6 +104,12 @@ public:
                         break;
                     case SUBTRACTION:
                         sum -= symbols[i].value;
+                        break;
+                    case MULTIPLICATION:
+                        sum *= symbols[i].value;
+                        break;
+                    case DIVISION:
+                        sum /= symbols[i].value;
                         break;
                     }
                     break;
@@ -134,7 +138,12 @@ public:
 
         void AddSymbol(int type, double value = 0.0f)
         {
-            symbols.push_back(Symbol(type, value));;
+            if (symbols.empty() && type != QUANTITY)
+            {
+                symbols.push_back(Symbol(QUANTITY, 1.0f));;
+            }
+
+            symbols.push_back(Symbol(type, value));
         }
     };
 

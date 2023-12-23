@@ -67,13 +67,6 @@ Principia::Result Principia::E(int n, double x)
 
 void Principia::Parse(std::string sentence = "")
 {
-    sum = 0.0f;
-
-    bool isAdd = true;
-    bool isSub = false;
-    bool isDiv = false;
-    bool isMul = false;
-
     // Parameter mode
     bool isParam = false;
     float param = 0.0f;
@@ -121,23 +114,6 @@ void Principia::Parse(std::string sentence = "")
             if (isParam == false)
             {
                 expression.AddSymbol(QUANTITY, yylval);
-
-                if (isAdd)
-                {
-                    sum += yylval;
-                }
-                else if (isSub)
-                {
-                    sum -= yylval;
-                }
-                else if (isDiv)
-                {
-                    sum /= yylval;
-                }
-                else if (isMul)
-                {
-                    sum *= yylval;
-                }
             }
             else
             {
@@ -154,53 +130,37 @@ void Principia::Parse(std::string sentence = "")
             break;
 
         case ADD:
-            isAdd = true;
-            isSub = false;
-            isDiv = false;
-            isMul = false;
             expression.AddSymbol(ADDITION);
             break;
 
         case SUB:
-            isAdd = false;
-            isSub = true;
-            isDiv = false;
-            isMul = false;
             expression.AddSymbol(SUBTRACTION);
             break;
 
         case DIV:
-            isAdd = false;
-            isSub = false;
-            isDiv = true;
-            isMul = false;
             expression.AddSymbol(DIVISION);
             break;
 
         case MUL:
-            isAdd = false;
-            isSub = false;
-            isDiv = false;
-            isMul = true;
             expression.AddSymbol(MULTIPLICATION);
             break;
 
         case SIN:
             isSin = true;
             break;
+
         case COS:
             isCos = true;
             break;
-        case COMMA:
-            //printf("comma\n");
-            break;
+
         case PI:
-            sum += 3.14156f;
+            expression.AddSymbol(QUANTITY, 3.141593);
             break;
 
         case LEFT_PAR: // (
             //printf("Left parenthesis\n");
             break;
+
         case RIGHT_PAR: // )
             //printf("Right parenthesis\n");
             break;
@@ -209,6 +169,7 @@ void Principia::Parse(std::string sentence = "")
             isSequence = true;
             //printf("Left parenthesis\n");
             break;
+
         case RIGHT_CURL: // }
             //printf("Right parenthesis\n");
             break;
@@ -243,31 +204,28 @@ void Principia::Parse(std::string sentence = "")
         yy_delete_buffer(buffer);
     }
 
-    //printf("x=%f\n", sum);
-
     if (isSin && isCos)
     {
-        Result a = Sin(param, sum) + Cos(param,sum);
+        Result a = Sin(param, expression.Compute()) + Cos(param, expression.Compute());
 
-        printf("\nSn = %f\n", a.Sn);
-        printf("En = %f\n\n", a.En);
+        printf("Sn = %f\n", a.Sn);
+        printf("En = %f", a.En);
     }
     else if (isSin)
     {
-        Result a = Sin(param, sum);
+        Result a = Sin(param, expression.Compute());
 
-        printf("\nSn = %f\n", a.Sn);
-        printf("En = %f\n\n", a.En);
+        printf("Sn = %f\n", a.Sn);
+        printf("En = %f", a.En);
     }
     else if (isCos)
     {
-        Result a = Cos(param, sum);
+        Result a = Cos(param, expression.Compute());
 
-        printf("\nSn = %f\n", a.Sn);
-        printf("En = %f\n\n", a.En);
+        printf("Sn = %f\n", a.Sn);
+        printf("En = %f", a.En);
     }
-
-    if (isSequence)
+    else if (isSequence)
     {
         printf("{ ");
 
@@ -275,18 +233,22 @@ void Principia::Parse(std::string sentence = "")
         {
             if (i != secondParam)
             {
-                printf("%i, ", expression.Compute(i));
+                printf("%i, ", int(expression.Compute(i)));
             }
             else
             {
-                printf("%i", expression.Compute(i));
+                printf("%i", int(expression.Compute(i)));
             }
         }
 
-        printf(" } \n");
+        printf(" }");
+    }
+    else
+    {
+        printf("%f", expression.Compute());
     }
 
-    printf("\n");
+    printf("\n\n");
 }
 
 Principia::Principia()
