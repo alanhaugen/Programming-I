@@ -59,8 +59,16 @@ Principia::Result Principia::Cos(int n, double x)
 Principia::Result Principia::E(int n, double x)
 {
     Result a;
-    a.En = n;
-    a.Sn = x;
+
+    for (int i = 0; i < n; i++)
+    {
+        double teller = pow(x, i);
+        double nevner  = Factorial(i);
+        a.Sn += teller / nevner;
+    }
+
+    a.En = pow(x, 2 * (n + 1) + 1) / Factorial(2 * (n+1)+1);
+    if (a.En < 0.) a.En = -a.En;
 
     return a;
 }
@@ -78,9 +86,10 @@ void Principia::Parse(std::string sentence = "")
     // State for sequences
     bool isSequence = false;
 
-    // States for sin and cos
-    bool isSin = false;
-    bool isCos = false;
+    // States for sin and cos and E^
+    bool isSin  = false;
+    bool isCos  = false;
+    bool isPowE = false;
 
     // Take string and tokenize it
     int tok;
@@ -105,8 +114,6 @@ void Principia::Parse(std::string sentence = "")
     while (isAlive)
     {
         tok = yylex();
-
-        //printf("%d", tok);
 
         switch(tok)
         {
@@ -180,7 +187,7 @@ void Principia::Parse(std::string sentence = "")
             break;
 
         case E_POW:
-            printf("E to the power of\n");
+            isPowE = true;
             break;
 
         case VAR:
@@ -221,6 +228,13 @@ void Principia::Parse(std::string sentence = "")
     else if (isCos)
     {
         Result a = Cos(param, expression.Compute());
+
+        printf("Sn = %f\n", a.Sn);
+        printf("En = %f", a.En);
+    }
+    else if (isPowE)
+    {
+        Result a = E(param, expression.Compute());
 
         printf("Sn = %f\n", a.Sn);
         printf("En = %f", a.En);
