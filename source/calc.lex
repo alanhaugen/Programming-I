@@ -20,6 +20,7 @@
         RIGHT_CURL,
         PARAMETER,
         E_POW,
+        FACTORIAL,
         IGNORE,
         VAR,
         EOL
@@ -47,6 +48,7 @@
 "n=" { return PARAMETER; }
 "n" { return VAR; }
 "x" { return VAR; }
+"i" { return VAR; }
 [0-9]+(\.[0-9]+)? { yylval = atof(yytext); return NUMBER; }
 e^ { return E_POW; }
 E^ { return E_POW; }
@@ -56,6 +58,7 @@ to { return IGNORE; }
 "," { return IGNORE; }
 "sqrt" { return SQRT; }
 "SQRT" { return SQRT; }
+"!" { return FACTORIAL; }
 infinity { yylval = 20.0f; return NUMBER; }
 [ \t] { /* ignore whitespace */ }
 . { printf("Mystery character %s\n", yytext); }

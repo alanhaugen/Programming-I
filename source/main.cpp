@@ -212,13 +212,13 @@ int main()
      *
     */
 
+    while(true)
+    Principia();
+
     one();
     two();
     three();
     four();
-
-    while(true)
-    Principia();
 
     return 0;
 }

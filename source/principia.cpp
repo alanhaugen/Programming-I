@@ -20,6 +20,23 @@ unsigned int Factorial(unsigned int n)
     return result;
 }
 
+double Calculation(double sum, double value, int currentOperation)
+{
+    switch (currentOperation)
+    {
+    case ADDITION:
+        return sum += value;
+    case SUBTRACTION:
+        return sum -= value;
+    case MULTIPLICATION:
+        return sum *= value;
+    case DIVISION:
+        return sum /= value;
+    }
+
+    return 0;
+}
+
 Principia::Result Principia::Sin(int n, double x)
 {
     Result a;
@@ -165,25 +182,20 @@ void Principia::Parse(std::string sentence = "")
             break;
 
         case LEFT_PAR: // (
-            //printf("Left parenthesis\n");
             break;
 
         case RIGHT_PAR: // )
-            //printf("Right parenthesis\n");
             break;
 
         case LEFT_CURL: // {
             isSequence = true;
-            //printf("Left parenthesis\n");
             break;
 
         case RIGHT_CURL: // }
-            //printf("Right parenthesis\n");
             break;
 
         case PARAMETER:
             isParam = true;
-            //printf("Parameter\n");
             break;
 
         case E_POW:
@@ -196,6 +208,10 @@ void Principia::Parse(std::string sentence = "")
 
         case SQRT:
             expression.AddSymbol(SQUARE_ROOT);
+            break;
+
+        case FACTORIAL:
+            expression.symbols.back().isFactorial = true;
             break;
 
         case IGNORE:

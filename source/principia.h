@@ -23,12 +23,27 @@ enum yytokentype {
     RIGHT_CURL,
     PARAMETER,
     E_POW,
+    FACTORIAL,
     IGNORE,
     VAR,
     EOL
 };
 
 extern double yylval;
+
+enum type
+{
+    QUANTITY,
+    VARIABLE,
+    ADDITION, // Operators
+    SUBTRACTION,
+    MULTIPLICATION,
+    DIVISION,
+    EXPONENTIATION,
+    SQUARE_ROOT
+};
+
+double Calculation(double sum, double value, int currentOperation);
 
 class Principia
 {
@@ -56,16 +71,14 @@ public:
         }
     };
 
-    enum type
+    enum rating
     {
-        QUANTITY,
-        VARIABLE,
-        ADDITION, // Operators
-        SUBTRACTION,
-        MULTIPLICATION,
-        DIVISION,
-        EXPONENTIATION,
-        SQUARE_ROOT
+        SIMPLE,
+        LINEAR_POLYNOMIAL,
+        QUADRATIC_POLYNOMIAL,
+        RATIONAL_FRACTION,
+        COMPLEX,
+        FORMULA
     };
 
     struct Expression
@@ -74,19 +87,23 @@ public:
         {
             int type;
             double value;
+            bool isFactorial;
 
             Symbol(int type_ = QUANTITY, double value_ = 1.0f)
             {
                 type  = type_;
                 value = value_;
+                isFactorial = false;
             }
         };
 
         std::vector<Symbol> symbols;
         int currentOperation;
+        int rank;
 
         Expression()
         {
+            rank = SIMPLE;
         }
 
         double Compute(long int variable = 1)
@@ -96,27 +113,25 @@ public:
 
             for (unsigned long i = 0; i < symbols.size(); i++)
             {
+                if (symbols[i].isFactorial)
+                {
+                    symbols[i].value = Factorial(symbols[i].value);
+                }
+
                 switch (symbols[i].type)
                 {
                 case QUANTITY:
-                    switch (currentOperation)
-                    {
-                    case ADDITION:
-                        sum += symbols[i].value;
-                        break;
-                    case SUBTRACTION:
-                        sum -= symbols[i].value;
-                        break;
-                    case MULTIPLICATION:
-                        sum *= symbols[i].value;
-                        break;
-                    case DIVISION:
-                        sum /= symbols[i].value;
-                        break;
-                    }
+                    sum = Calculation(sum, symbols[i].value, currentOperation);
                     break;
                 case VARIABLE:
-                    sum *= variable; // add division
+                    if (symbols[i].isFactorial)
+                    {
+                        sum = Calculation(sum, Factorial(i), currentOperation);
+                    }
+                    else
+                    {
+                        sum = Calculation(sum, variable, MULTIPLICATION);
+                    }
                     break;
                 case ADDITION:
                     currentOperation = ADDITION;
