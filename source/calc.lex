@@ -16,8 +16,12 @@
         PI,
         LEFT_PAR,
         RIGHT_PAR,
+        LEFT_CURL,
+        RIGHT_CURL,
         PARAMETER,
         E_POW,
+        IGNORE,
+        VAR,
         EOL
     };
 
@@ -38,12 +42,19 @@
 "," { return COMMA; }
 "(" { return LEFT_PAR; }
 ")" { return RIGHT_PAR; }
+"{" { return LEFT_CURL; }
+"}" { return RIGHT_CURL; }
 "pi" { return PI; }
 "n=" { return PARAMETER; }
+"n" { return VAR; }
+"x" { return VAR; }
 [0-9]+(\.[0-9]+)? { yylval = atof(yytext); return NUMBER; }
 e^ { return E_POW; }
 E^ { return E_POW; }
 \n { return EOL; }
+from { return IGNORE; }
+to { return IGNORE; }
+infinity { yylval = 20.0f; return NUMBER; }
 [ \t] { /* ignore whitespace */ }
 . { printf("Mystery character %s\n", yytext); }
 

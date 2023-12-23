@@ -6,22 +6,13 @@
 
 void a1()
 {
-    cout << "{ 2n - 1 } from n=1 to infinity" << endl;
     cout << "This sequence is the odd numbers" << endl;
-
-    Principia("{ 2n - 1 }, n=1, 20");
-
-    for (int n = 1; n <= 20; n++)
-    {
-        cout << "n = " << n << ": " << (2 * n) - 1 << endl;
-    }
+    Principia("{ 2n - 1 } from n=1 to infinity");
 }
 
 void b1()
 {
-    cout << "{ ((-1)^(n+1)) * (1/n) } from n=1 to infinity" << endl;
-
-    Principia("{ ((-1)^(n+1)) * (1/n) }, n=1, 20");
+    Principia("{ ((-1)^(n+1)) * (1/n) } from n=1 to infinity");
 
     for (int n = 1; n <= 20; n++)
     {
@@ -31,9 +22,7 @@ void b1()
 
 void c1()
 {
-    cout << "{ 1/n! } from n=1 to infinity" << endl;
-
-    Principia("{ 1/n! }, n=1, 20");
+    Principia("{ 1/n! } from n=1 to infinity");
 
     for (int n = 1; n <= 20; n++)
     {
@@ -43,9 +32,7 @@ void c1()
 
 void d1()
 {
-    cout << "{ ((-1)^(n+1)) / (1/n!) } from n=1 to infinity" << endl;
-
-    Principia("{ ((-1)^(n+1)) / (1/n!) }, n=1, 20");
+    Principia("{ ((-1)^(n+1)) / (1/n!) } from n=1 to infinity");
 
     for (int n = 1; n <= 20; n++)
     {
@@ -55,9 +42,7 @@ void d1()
 
 void e1()
 {
-    cout << "{ sinus ((n * pi) / 2) } from n=1 to infinity" << endl;
-
-    Principia("{ sinus ((n * pi) / 2) }, n=1, 20");
+    Principia("{ sinus ((n * pi) / 2) } from n=1 to infinity");
 
     for (int n = 1; n <= 20; n++)
     {
@@ -216,9 +201,8 @@ int main()
      *
     */
 
-    //one();
-    //two();
-
+    one();
+    two();
     three();
 
     //while(true)

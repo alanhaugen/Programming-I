@@ -78,6 +78,13 @@ void Principia::Parse(std::string sentence = "")
     bool isParam = false;
     float param = 0.0f;
 
+    // Second parameter mode
+    bool isSecondParam = false;
+    float secondParam = 0.0f;
+
+    // State for sequences
+    bool isSequence = false;
+
     // States for sin and cos
     bool isSin = false;
     bool isCos = false;
@@ -100,6 +107,8 @@ void Principia::Parse(std::string sentence = "")
 
     bool isAlive = true;
 
+    Expression expression;
+
     while (isAlive)
     {
         tok = yylex();
@@ -111,6 +120,8 @@ void Principia::Parse(std::string sentence = "")
         case NUMBER:
             if (isParam == false)
             {
+                expression.AddSymbol(QUANTITY, yylval);
+
                 if (isAdd)
                 {
                     sum += yylval;
@@ -130,8 +141,15 @@ void Principia::Parse(std::string sentence = "")
             }
             else
             {
-                param = yylval;
-                printf("n=%f\n", param);
+                if (isSecondParam == false)
+                {
+                    param = yylval;
+                    isSecondParam = true;
+                }
+                else
+                {
+                    secondParam = yylval;
+                }
             }
             break;
 
@@ -140,6 +158,7 @@ void Principia::Parse(std::string sentence = "")
             isSub = false;
             isDiv = false;
             isMul = false;
+            expression.AddSymbol(ADDITION);
             break;
 
         case SUB:
@@ -147,6 +166,7 @@ void Principia::Parse(std::string sentence = "")
             isSub = true;
             isDiv = false;
             isMul = false;
+            expression.AddSymbol(SUBTRACTION);
             break;
 
         case DIV:
@@ -154,6 +174,7 @@ void Principia::Parse(std::string sentence = "")
             isSub = false;
             isDiv = true;
             isMul = false;
+            expression.AddSymbol(DIVISION);
             break;
 
         case MUL:
@@ -161,6 +182,7 @@ void Principia::Parse(std::string sentence = "")
             isSub = false;
             isDiv = false;
             isMul = true;
+            expression.AddSymbol(MULTIPLICATION);
             break;
 
         case SIN:
@@ -176,10 +198,18 @@ void Principia::Parse(std::string sentence = "")
             sum += 3.14156f;
             break;
 
-        case LEFT_PAR:
+        case LEFT_PAR: // (
             //printf("Left parenthesis\n");
             break;
-        case RIGHT_PAR:
+        case RIGHT_PAR: // )
+            //printf("Right parenthesis\n");
+            break;
+
+        case LEFT_CURL: // {
+            isSequence = true;
+            //printf("Left parenthesis\n");
+            break;
+        case RIGHT_CURL: // }
             //printf("Right parenthesis\n");
             break;
 
@@ -190,6 +220,13 @@ void Principia::Parse(std::string sentence = "")
 
         case E_POW:
             printf("E to the power of\n");
+            break;
+
+        case VAR:
+            expression.AddSymbol(VARIABLE);
+            break;
+
+        case IGNORE:
             break;
 
         case EOL:
@@ -206,7 +243,7 @@ void Principia::Parse(std::string sentence = "")
         yy_delete_buffer(buffer);
     }
 
-    printf("x=%f\n", sum);
+    //printf("x=%f\n", sum);
 
     if (isSin && isCos)
     {
@@ -229,6 +266,27 @@ void Principia::Parse(std::string sentence = "")
         printf("\nSn = %f\n", a.Sn);
         printf("En = %f\n\n", a.En);
     }
+
+    if (isSequence)
+    {
+        printf("{ ");
+
+        for (long int i = param; i <= secondParam; i++)
+        {
+            if (i != secondParam)
+            {
+                printf("%i, ", expression.Compute(i));
+            }
+            else
+            {
+                printf("%i", expression.Compute(i));
+            }
+        }
+
+        printf(" } \n");
+    }
+
+    printf("\n");
 }
 
 Principia::Principia()
