@@ -267,11 +267,11 @@ void Principia::Parse(std::string sentence = "")
         {
             if (i != secondParam)
             {
-                printf("%i, ", int(expression.Compute(i)));
+                printf("%f, ", expression.Compute(i));
             }
             else
             {
-                printf("%i", int(expression.Compute(i)));
+                printf("%f", expression.Compute(i));
             }
         }
 

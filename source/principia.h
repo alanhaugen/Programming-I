@@ -126,11 +126,18 @@ public:
                 case VARIABLE:
                     if (symbols[i].isFactorial)
                     {
-                        sum = Calculation(sum, Factorial(i), currentOperation);
+                        sum = Calculation(sum, Factorial(i), ADDITION);
                     }
                     else
                     {
-                        sum = Calculation(sum, variable, MULTIPLICATION);
+                        if (currentOperation == DIVISION)
+                        {
+                            sum = Calculation(sum, variable, DIVISION);
+                        }
+                        else
+                        {
+                            sum = Calculation(sum, variable, MULTIPLICATION);
+                        }
                     }
                     break;
                 case ADDITION:
