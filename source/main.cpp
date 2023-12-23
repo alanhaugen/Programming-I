@@ -84,7 +84,7 @@ void one()
 
 void a2()
 {
-    cout << "{(i*i - 4)} from i=1 to 20" << endl;
+    Principia("{(i*i - 4)} from i=1 to 20");
 
     double sum = 0;
 
@@ -99,7 +99,7 @@ void a2()
 
 void b2()
 {
-    cout << "{sin(i/10)} from i=0 to 32" << endl;
+    Principia("{sin(i/10)} from i=0 to 32");
 
     double sum = 0;
 
@@ -114,7 +114,7 @@ void b2()
 
 void c2()
 {
-    cout << "{sqrt(4*i)} from i=0 to 16" << endl;
+    Principia("{sqrt(4*i)} from i=0 to 16");
 
     double sum = 0;
 
@@ -168,8 +168,14 @@ void d3()
 
 void e3()
 {
-    // Lag en funksjon som beregner sin(x) + cos(x) med input parametre n og x,
-    // som returnerer Sn og |En|.
+    // Ekstraoppgave: Potensrekka for en funksjon er mest nøyaktig rundt sentrum
+    // for rekka, som her er x=0. For sinus og cosinus er det egentlig nok å beregne
+    // verdien i første kvadrant, og deretter bruke det vi vet om at sinus og cosinus
+    // er periodiske, samt hvilke kvadrant de er positive og negative i. Bruk denne
+    // kunnskapen til å forbedre din beregning av sinx og cosx i a og b slik at de
+    // blir ganske nøyaktige for alle verdier av x uten at du har alt for stor n. NB!
+    // Isteden for å bruke potensrekka til å beregne sinx og cosx i første kvadrant,
+    // kan en beregne for
 }
 
 void three()
@@ -190,6 +196,11 @@ void three()
     e3();
 }
 
+void four()
+{
+
+}
+
 int main()
 {
     /*
@@ -204,6 +215,7 @@ int main()
     one();
     two();
     three();
+    four();
 
     while(true)
     Principia();

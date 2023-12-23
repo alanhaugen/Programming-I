@@ -16,6 +16,7 @@ enum yytokentype {
     SIN,
     COS,
     PI,
+    SQRT,
     LEFT_PAR,
     RIGHT_PAR,
     LEFT_CURL,
@@ -63,7 +64,8 @@ public:
         SUBTRACTION,
         MULTIPLICATION,
         DIVISION,
-        EXPONENTIATION
+        EXPONENTIATION,
+        SQUARE_ROOT
     };
 
     struct Expression

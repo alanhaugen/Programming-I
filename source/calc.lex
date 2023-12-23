@@ -13,6 +13,7 @@
         SIN,
         COS,
         PI,
+        SQRT,
         LEFT_PAR,
         RIGHT_PAR,
         LEFT_CURL,
@@ -53,6 +54,8 @@ E^ { return E_POW; }
 from { return IGNORE; }
 to { return IGNORE; }
 "," { return IGNORE; }
+"sqrt" { return SQRT; }
+"SQRT" { return SQRT; }
 infinity { yylval = 20.0f; return NUMBER; }
 [ \t] { /* ignore whitespace */ }
 . { printf("Mystery character %s\n", yytext); }

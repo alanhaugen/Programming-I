@@ -194,6 +194,10 @@ void Principia::Parse(std::string sentence = "")
             expression.AddSymbol(VARIABLE);
             break;
 
+        case SQRT:
+            expression.AddSymbol(SQUARE_ROOT);
+            break;
+
         case IGNORE:
             break;
 
