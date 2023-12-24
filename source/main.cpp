@@ -175,7 +175,7 @@ void e3()
     // kunnskapen til å forbedre din beregning av sinx og cosx i a og b slik at de
     // blir ganske nøyaktige for alle verdier av x uten at du har alt for stor n. NB!
     // Isteden for å bruke potensrekka til å beregne sinx og cosx i første kvadrant,
-    // kan en beregne for
+    // kan en beregne for −(pi/4) ≤ x ≤ pi/4
 }
 
 void three()
@@ -201,6 +201,21 @@ void four()
 
 }
 
+void five()
+{
+
+}
+
+void six()
+{
+
+}
+
+void seven()
+{
+
+}
+
 int main()
 {
     /*
@@ -219,6 +234,9 @@ int main()
     two();
     three();
     four();
+    five();
+    six();
+    seven();
 
     return 0;
 }

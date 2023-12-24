@@ -26,6 +26,7 @@ enum yytokentype {
     FACTORIAL,
     IGNORE,
     VAR,
+    SUM,
     EOL
 };
 

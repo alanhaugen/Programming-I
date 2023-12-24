@@ -102,6 +102,7 @@ void Principia::Parse(std::string sentence = "")
 
     // State for sequences
     bool isSequence = false;
+    bool isSum      = false;
 
     // States for sin and cos and E^
     bool isSin  = false;
@@ -181,17 +182,17 @@ void Principia::Parse(std::string sentence = "")
             expression.AddSymbol(QUANTITY, 3.141593);
             break;
 
-        case LEFT_PAR: // (
+        case LEFT_PAR:
             break;
 
-        case RIGHT_PAR: // )
+        case RIGHT_PAR:
             break;
 
-        case LEFT_CURL: // {
+        case LEFT_CURL:
             isSequence = true;
             break;
 
-        case RIGHT_CURL: // }
+        case RIGHT_CURL:
             break;
 
         case PARAMETER:
@@ -212,6 +213,10 @@ void Principia::Parse(std::string sentence = "")
 
         case FACTORIAL:
             expression.symbols.back().isFactorial = true;
+            break;
+
+        case SUM:
+            isSum = true;
             break;
 
         case IGNORE:
@@ -263,23 +268,32 @@ void Principia::Parse(std::string sentence = "")
     {
         printf("{ ");
 
+        double sum = 0.0f;
+
         for (long int i = param; i <= secondParam; i++)
         {
             if (i != secondParam)
             {
-                printf("%f, ", expression.Compute(i));
+                printf("%.3f, ", expression.Compute(i));
             }
             else
             {
-                printf("%f", expression.Compute(i));
+                printf("%.3f", expression.Compute(i));
             }
+
+            sum += expression.Compute(i);
         }
 
         printf(" }");
+
+        if (isSum)
+        {
+            printf("\nSum: %f", sum);
+        }
     }
     else
     {
-        printf("%f", expression.Compute());
+        printf("%.3f", expression.Compute());
     }
 
     printf("\n\n");

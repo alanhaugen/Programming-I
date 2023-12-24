@@ -23,6 +23,7 @@
         FACTORIAL,
         IGNORE,
         VAR,
+        SUM,
         EOL
     };
 
@@ -58,6 +59,8 @@ to { return IGNORE; }
 "," { return IGNORE; }
 "sqrt" { return SQRT; }
 "SQRT" { return SQRT; }
+"sum" { return SUM; }
+"include sum" { return SUM; }
 "!" { return FACTORIAL; }
 infinity { yylval = 20.0f; return NUMBER; }
 [ \t] { /* ignore whitespace */ }
