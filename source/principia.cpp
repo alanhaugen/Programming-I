@@ -25,13 +25,15 @@ double Calculation(double sum, double value, int currentOperation)
     switch (currentOperation)
     {
     case ADDITION:
-        return sum += value;
+        return sum + value;
     case SUBTRACTION:
-        return sum -= value;
+        return sum - value;
     case MULTIPLICATION:
-        return sum *= value;
+        return sum * value;
     case DIVISION:
-        return sum /= value;
+        return sum / value;
+    case EXPONENTIATION:
+        return pow(sum, value);
     }
 
     return 0;
@@ -170,6 +172,10 @@ void Principia::Parse(std::string sentence = "")
             expression.AddSymbol(MULTIPLICATION);
             break;
 
+        case EXP:
+            expression.AddSymbol(EXPONENTIATION);
+            break;
+
         case SIN:
             isSin = true;
             break;
@@ -242,20 +248,23 @@ void Principia::Parse(std::string sentence = "")
 
         printf("Sn = %f\n", a.Sn);
         printf("En = %f", a.En);
+        //printf("S = %f", sin(expression.Compute()));
     }
     else if (isSin)
     {
         Result a = Sin(param, expression.Compute());
 
         printf("Sn = %f\n", a.Sn);
-        printf("En = %f", a.En);
+        printf("En = %f\n", a.En);
+        printf("S  = %f", sin(expression.Compute()));
     }
     else if (isCos)
     {
         Result a = Cos(param, expression.Compute());
 
         printf("Sn = %f\n", a.Sn);
-        printf("En = %f", a.En);
+        printf("En = %f\n", a.En);
+        printf("S  = %f", cos(expression.Compute()));
     }
     else if (isPowE)
     {

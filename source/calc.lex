@@ -9,6 +9,7 @@
         SUB,
         MUL,
         DIV,
+        EXP,
         ABS,
         SIN,
         COS,
@@ -36,6 +37,8 @@
 "-" { return SUB; }
 "*" { return MUL; }
 "/" { return DIV; }
+"^" { return EXP; }
+"**" { return EXP; }
 "|" { return ABS; }
 "sin" { return SIN; }
 "sinus" { return SIN; }

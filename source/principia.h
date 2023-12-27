@@ -12,6 +12,7 @@ enum yytokentype {
     SUB,
     MUL,
     DIV,
+    EXP,
     ABS,
     SIN,
     COS,
@@ -154,6 +155,7 @@ public:
                     currentOperation = DIVISION;
                     break;
                 case EXPONENTIATION:
+                    currentOperation = EXPONENTIATION;
                     break;
                 }
             }
